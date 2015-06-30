@@ -1,0 +1,72 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ry.diary.MainActivity$PlaceholderFragment" >
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="ViewTreeObserver"
+        android:text="ViewTreeObserver" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="AnimationController"
+        android:text="AnimationController" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="drawable"
+        android:text="drawable" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="HandlerThread"
+        android:text="HandlerThread" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="ScreenFix"
+        android:text="ScreenFix" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="PopupWindowOnClick"
+        android:text="PopupWindowOnClick" />
+
+     <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="FlashView"
+        android:text="FlashView" />
+     
+     <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="shapeTextView"
+        android:text="shapeTextView" />
+     
+     <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="customDrawable"
+        android:text="customDrawable" />
+     
+     <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="AnimationDrawable"
+        android:text="AnimationDrawable" />
+        <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="AnimationView"
+        android:text="AnimationView" />
+</LinearLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:flatui="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <cn.ry.diary.demo.ShapeTextView.ShapeTextView
+        android:id="@+id/shapetextview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="ShapeTextview"
+        android:textSize="25sp"
+        flatui:bottomLeftRadius="10dp"
+        flatui:bottomRightRadius="0dp"
+        flatui:gradientCenterColor="#00000000"
+        flatui:gradientEndColor="#64DE0E"
+        flatui:gradientStartColor="#D11B1E"
+        flatui:solidColor="#64D11C"
+        flatui:stroke_Color="#D11B1E"
+        flatui:stroke_Width="2dp"
+        flatui:topLeftRadius="0dp"
+        flatui:topRightRadius="10dp"
+        flatui:touchSolidColor="#F5B2B9" />
+
+    <cn.ry.diary.demo.ShapeTextView.ShapeTextView
+        android:id="@+id/shapetextview1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="ORAL"
+        android:textSize="25sp"
+        flatui:gradientCenterColor="#00000000"
+        flatui:gradientEndColor="#64DE0E"
+        flatui:gradientStartColor="#D11B1E"
+        flatui:shapeType="OVAL"
+        flatui:solidColor="#64D11C"
+        flatui:strokeDashGap="5dp"
+        flatui:strokeDashWidth="5dp"
+        flatui:stroke_Color="#D11B1E"
+        flatui:stroke_Width="2dp"
+        flatui:touchSolidColor="#F5B2B9" />
+
+</LinearLayout>
