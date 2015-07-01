@@ -17,4 +17,11 @@
 	    android:layout_height="wrap_content"
 	    android:onClick="onClickItem"
 	    android:text="LayoutInflater"/>
+	
+	<Button 
+	    android:id="@+id/guideViewBt"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:onClick="onClickItem"
+	    android:text="guideView"/>
 </LinearLayout>
