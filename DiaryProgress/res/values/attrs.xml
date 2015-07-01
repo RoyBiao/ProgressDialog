@@ -53,4 +53,8 @@
         </attr>
         <attr name="gradientRadius" format="dimension" />
     </declare-styleable>
+    
+    <declare-styleable name="Overlay">
+        <attr name="overlayColor" format="color" />
+    </declare-styleable>
 </resources>

@@ -2,6 +2,7 @@ package cn.ry.diary.demo2;
 
 import cn.ry.diary.R;
 import cn.ry.diary.demo2.common.adapter.CommonAdapterActivity;
+import cn.ry.diary.demo2.guideview.GuideViewActivity;
 import cn.ry.diary.demo2.inflater.LayoutInflaterActivity;
 import android.app.Activity;
 import android.content.Intent;
@@ -24,6 +25,9 @@ public class Demo2Activity extends Activity{
 			break;
 		case R.id.LayoutInflaterBt:
 			startActivity(new Intent(this, LayoutInflaterActivity.class));
+			break;
+		case R.id.guideViewBt:
+			startActivity(new Intent(this, GuideViewActivity.class));
 			break;
 		default:
 			break;
