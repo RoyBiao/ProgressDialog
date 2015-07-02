@@ -24,4 +24,10 @@
 	    android:layout_height="wrap_content"
 	    android:onClick="onClickItem"
 	    android:text="guideView"/>
+	<Button 
+	    android:id="@+id/guideView2Bt"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:onClick="onClickItem"
+	    android:text="guideView2"/>
 </LinearLayout>
