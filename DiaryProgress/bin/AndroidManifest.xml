@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.ry.diary"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.RUN_INSTRUMENTATION" />
+
+    <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:label="Test for my app"
+        android:targetPackage="cn.ry.diary.demo" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <uses-library android:name="android.test.runner" />
+
+        <activity
+            android:name="cn.ry.diary.IndexActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="cn.ry.diary.demo.AnimationController.AnimationControllerActivity" >
+        </activity>
+        <activity android:name="cn.ry.diary.demo.drawable.DrawableActivity" >
+        </activity>
+        <activity android:name="cn.ry.diary.demo.handlerThread.HandlerThreadActivity" >
+        </activity>
+        <activity android:name="cn.ry.diary.demo.viewTreeObserver.ViewTreeObserverActivity" >
+        </activity>
+        <activity android:name="cn.ry.diary.demo.screenfix.ScreenFixActivity" >
+        </activity>
+        <activity android:name="cn.ry.diary.demo.flashview.FlashViewActivity" >
+        </activity>
+        <activity android:name="cn.ry.diary.demo.ShapeTextView.ShapeTextViewActivity" >
+        </activity>
+        <activity android:name="cn.ry.diary.demo.custom.drawable.MainActivity" >
+        </activity>
+        <activity android:name="cn.ry.diary.demo.custom.drawable.CircleImageDrawableActivity" >
+        </activity>
+        <activity android:name="cn.ry.diary.demo.custom.drawable.CustomStateDrawableActivity" >
+        </activity>
+        <activity android:name="cn.ry.diary.demo.custom.drawable.RoundImageDrawableActivity" >
+        </activity>
+        <activity android:name="cn.ry.diary.demo.animation.drawable.AnimDrawableActivity" >
+        </activity>
+        <activity android:name="cn.ry.diary.demo.animation.view.AnimViewActivity" />
+        <activity android:name="cn.ry.diary.demo2.Demo2Activity" >
+        </activity>
+        <activity android:name="cn.ry.diary.demo2.common.adapter.CommonAdapterActivity" >
+        </activity>
+         <activity android:name="cn.ry.diary.demo2.inflater.LayoutInflaterActivity" >
+        </activity>
+        <activity android:name="cn.ry.diary.demo2.guideview.GuideViewActivity" >
+        </activity>
+         <activity android:name="cn.ry.diary.demo2.guideview2.GuideView2Activity" >
+        </activity>
+        <activity android:name="cn.ry.diary.demo.DemoActivity" >
+        </activity>
+    </application>
+
+</manifest>

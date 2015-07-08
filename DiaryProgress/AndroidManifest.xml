@@ -64,7 +64,11 @@
         </activity>
         <activity android:name="cn.ry.diary.demo2.guideview.GuideViewActivity" >
         </activity>
+<<<<<<< HEAD
         <activity android:name="cn.ry.diary.demo2.webview.js.WebViewJSActivity" >
+=======
+         <activity android:name="cn.ry.diary.demo2.guideview2.GuideView2Activity" >
+>>>>>>> 831a945419f70fc29a9972f189ea910ece7f0493
         </activity>
         <activity android:name="cn.ry.diary.demo.DemoActivity" >
         </activity>

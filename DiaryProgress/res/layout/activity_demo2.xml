@@ -24,6 +24,7 @@
 	    android:layout_height="wrap_content"
 	    android:onClick="onClickItem"
 	    android:text="guideView"/>
+<<<<<<< HEAD
 
 	<Button 
 	    android:id="@+id/WebViewJsBt"
@@ -31,4 +32,12 @@
 	    android:layout_height="wrap_content"
 	    android:onClick="onClickItem"
 	    android:text="WebViewJs"/>	
+=======
+	<Button 
+	    android:id="@+id/guideView2Bt"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:onClick="onClickItem"
+	    android:text="guideView2"/>
+>>>>>>> 831a945419f70fc29a9972f189ea910ece7f0493
 </LinearLayout>
