@@ -24,4 +24,11 @@
 	    android:layout_height="wrap_content"
 	    android:onClick="onClickItem"
 	    android:text="guideView"/>
+
+	<Button 
+	    android:id="@+id/WebViewJsBt"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:onClick="onClickItem"
+	    android:text="WebViewJs"/>	
 </LinearLayout>
