@@ -30,4 +30,12 @@
 	    android:layout_height="wrap_content"
 	    android:onClick="onClickItem"
 	    android:text="guideView2"/>
+	<Button 
+	    android:id="@+id/ImagesWidgetConfigurationBt"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:onClick="onClickItem"
+	    android:text="ImagesWidgetConfiguration"/>
+	
+
 </LinearLayout>

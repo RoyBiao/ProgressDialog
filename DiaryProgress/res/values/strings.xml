@@ -4,5 +4,9 @@
     <string name="app_name">DiaryExam</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="configure_intro">Images Widget Configuration</string>
+    <string name="configure_update">Update Time</string>
+    <string name="udpate_rate_hint">value in seconds</string>
+    <string name="save_config">Save</string>
 
 </resources>
