@@ -3,39 +3,47 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-    
-	<Button 
-	    android:id="@+id/commonAdapterBt"
-	    android:layout_width="match_parent"
-	    android:layout_height="wrap_content"
-	    android:onClick="onClickItem"
-	    android:text="CommonAdapter"/>
-	
-	<Button 
-	    android:id="@+id/LayoutInflaterBt"
-	    android:layout_width="match_parent"
-	    android:layout_height="wrap_content"
-	    android:onClick="onClickItem"
-	    android:text="LayoutInflater"/>
-	
-	<Button 
-	    android:id="@+id/guideViewBt"
-	    android:layout_width="match_parent"
-	    android:layout_height="wrap_content"
-	    android:onClick="onClickItem"
-	    android:text="guideView"/>
-	<Button 
-	    android:id="@+id/guideView2Bt"
-	    android:layout_width="match_parent"
-	    android:layout_height="wrap_content"
-	    android:onClick="onClickItem"
-	    android:text="guideView2"/>
-	<Button 
-	    android:id="@+id/ImagesWidgetConfigurationBt"
-	    android:layout_width="match_parent"
-	    android:layout_height="wrap_content"
-	    android:onClick="onClickItem"
-	    android:text="ImagesWidgetConfiguration"/>
-	
+
+    <Button
+        android:id="@+id/commonAdapterBt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickItem"
+        android:text="CommonAdapter" />
+
+    <Button
+        android:id="@+id/LayoutInflaterBt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickItem"
+        android:text="LayoutInflater" />
+
+    <Button
+        android:id="@+id/guideViewBt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickItem"
+        android:text="guideView" />
+
+    <Button
+        android:id="@+id/WebViewJsBt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickItem"
+        android:text="WebViewJs" />
+
+    <Button
+        android:id="@+id/guideView2Bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickItem"
+        android:text="guideView2" />
+
+    <Button
+        android:id="@+id/ImagesWidgetConfigurationBt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickItem"
+        android:text="ImagesWidgetConfiguration" />
 
 </LinearLayout>
