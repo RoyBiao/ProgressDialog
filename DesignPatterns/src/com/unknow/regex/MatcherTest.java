@@ -3,8 +3,6 @@ package com.unknow.regex;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.junit.Test;
-
 /*
 常用的符号 
 . 表示任意一个字符
@@ -76,7 +74,6 @@ public class MatcherTest {
 	/**
 	 * 身份证
 	 */
-	@Test
 	public void test3() {
 		Pattern p = null; // 正则表达式
 		Matcher m = null; // 操作的字符串
