@@ -1,2 +1,13 @@
 1.cp ‐r dir1 dir2,递归复制命令(复制子目录信息)
 2.shutdown -h 10:42 'Hey! Go away!' 10:42 分关机 
+3.sudo gparted 磁盘管理工具
+4.dconf-editor 配置编辑器(解决乱码)
+5.meld 代码比较（sudo apt-get intall meld）
+6.vi ~/.bashrc
+  source ~./bashrc     ( /etc/profile)
+ 	例如：
+	export NDK_HOME=/home/ruibiao/soft/android/android-ndk-r10b
+	export PATH=$NDK_HOME:$PATH
+7.grep -rn "ZQParamsExt" .
+8.ps 进程监控 （ps | grep monkey）
+

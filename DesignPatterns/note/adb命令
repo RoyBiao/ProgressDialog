@@ -1,0 +1,7 @@
+1.adb -s F8UDU15324007836 logcat -s ZQLog
+  adb -s HC269W104598 logcat *:W^C
+  adb -s HC269W104598 logcat | grep -->
+
+2.adb -s 11ab0cb shell monkey  --throttle 1000 -p cn.hslive.zq -v 45001 
+
+

@@ -1,1 +1,6 @@
-1.如果一个static域不是final，那么在对它进行访问时，总是要求它在被读取之前，要先进行链接(分配存储空间)和初始化（初始化存储空间）。
+1.Class.getInterfaces()
+  Class.isInterface()
+  Class.getSuperclass()
+  Class.newInstance()(必需含有默认构造器) ，Class.forName("") (获取class对象的引用的一种方法,立即初始化) ， 具体类.Class()(不会立即初始化，加载、链接、初始化)
+  Class.isAssignableFrom()
+2.如果一个static域不是final，那么在对它进行访问时，总是要求它在被读取之前，要先进行链接(分配存储空间)和初始化（初始化存储空间）。

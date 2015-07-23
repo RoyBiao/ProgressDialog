@@ -1,10 +1,19 @@
 package com.thinking.typeinfo.demo1;
 
+import java.lang.reflect.InvocationTargetException;
+import java.util.HashMap;
+import java.util.Map;
+
 class Toy {
 	Toy() {
 	}
 
 	Toy(int i) {
+	}
+	
+	@Override
+	public String toString() {
+		return "toy";
 	}
 }
 
@@ -55,5 +64,41 @@ public class ToyTest {
 			System.exit(1);
 		}
 		printInfo(obj.getClass());
+		
+		
+		//利用反射创建Toy对象
+		try {
+			Toy toy = Toy.class.getDeclaredConstructor(int.class).newInstance(1);
+			System.out.println(toy);
+		} catch (InstantiationException e) {
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			e.printStackTrace();
+		} catch (IllegalArgumentException e) {
+			e.printStackTrace();
+		} catch (InvocationTargetException e) {
+			e.printStackTrace();
+		} catch (NoSuchMethodException e) {
+			e.printStackTrace();
+		} catch (SecurityException e) {
+			e.printStackTrace();
+		}
+		
+		try {
+			Class<?> cc = Class.forName("com.thinking.typeinfo.demo1.Toy");
+			Toy toy = null;
+			try {
+				toy = (Toy) cc.newInstance();
+			} catch (InstantiationException e) {
+				e.printStackTrace();
+			} catch (IllegalAccessException e) {
+				e.printStackTrace();
+			}
+			System.out.println(toy);
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 	}
 }
