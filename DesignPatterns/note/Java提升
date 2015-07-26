@@ -1,6 +1,19 @@
+1.Arrays.asList() 数组转化为集合
+2.Collections.addAll 返回true or false     
+　Collections.sort()排序　　　
+　Collections.shuffle()混淆
+3.list.set(1,"")
+  list.subList(1,4) 
+  list.containtAll(list2) 
+  list.addAll(2,list2)从第三个位置开始添加所有的list2  
+  list.toArray(new Pet[0]) 集合转化为数组，如何创建的数组大小小于list的大小，会自动匹配合适大小的数组
+　list.indexOf(Object o)　对象o在list所处的索引
+
+
 1.Class.getInterfaces()
   Class.isInterface()
   Class.getSuperclass()
   Class.newInstance()(必需含有默认构造器) ，Class.forName("") (获取class对象的引用的一种方法,立即初始化) ， 具体类.Class()(不会立即初始化，加载、链接、初始化)
   Class.isAssignableFrom()
 2.如果一个static域不是final，那么在对它进行访问时，总是要求它在被读取之前，要先进行链接(分配存储空间)和初始化（初始化存储空间）。
+
