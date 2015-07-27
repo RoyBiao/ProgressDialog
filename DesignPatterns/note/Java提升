@@ -8,6 +8,15 @@
   list.addAll(2,list2)从第三个位置开始添加所有的list2  
   list.toArray(new Pet[0]) 集合转化为数组，如何创建的数组大小小于list的大小，会自动匹配合适大小的数组
 　list.indexOf(Object o)　对象o在list所处的索引
+4.迭代器统一了对容器的访问方式  Iterator add()和set()的区别
+5.ListIterator ,listIterator() , hasNext() , next() , nextIndex() , previousIndex() , previous() ,listIterator(3)
+6.TreeSet<String> set1 = new TreeSet<String>();//按字典排序
+  TreeSet<String> set2 = new TreeSet<String>(String.CASE_INSENSITIVE_ORDER);//按字母排序
+7.Collection:
+	List:ArrayList,LinkedList
+	Set:HashSet,TreeSet,LinkHashSet
+  Map:
+    HashMap,TreeMap,LinkedHashMap
 
 
 1.Class.getInterfaces()
