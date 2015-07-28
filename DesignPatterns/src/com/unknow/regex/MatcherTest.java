@@ -31,7 +31,7 @@ public class MatcherTest {
 
 	public static void main(String[] args) {
 		MatcherTest test=new MatcherTest();
-		test.test10();
+		test.test7();
 	}
 	
 	public void test1() {
@@ -160,9 +160,10 @@ public class MatcherTest {
 		/*
 		 * 本例groupCount将返回三组a11bbb、11、bbb
 		 */
-		Pattern p = Pattern.compile("\\w(\\d\\d)(\\w+)");
+		Pattern p = Pattern.compile("(\\w)(\\d\\d)(\\w+)");
 		Matcher m = p.matcher("aa11bbb");
 		if (m.find()) {
+			System.out.println("group:" + m.group());
 			int count = m.groupCount(); // 返回匹配组的数目，而不是匹配字符串的数目
 			for (int i = 0; i <= count; i++)
 				System.out.println("group " + i + " :" + m.group(i));
@@ -184,6 +185,7 @@ public class MatcherTest {
 		Pattern p = Pattern.compile("\\d+"); // 将所含数字全部替换为XX
 		Matcher m = p.matcher("aa11bbb33cc55gg");
 		if (m.find()) {
+			System.out.println( m.group());
 			int count = m.groupCount(); // 返回匹配组的数目，而不是匹配字符串的数目
 			for (int i = 0; i <= count; i++)
 				System.out.println("group " + i + " :" + m.group(i));

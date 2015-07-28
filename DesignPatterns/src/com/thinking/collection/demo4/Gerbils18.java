@@ -1,7 +1,10 @@
 package com.thinking.collection.demo4;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.LinkedHashMap;
+import java.util.LinkedHashSet;
+import java.util.LinkedList;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
@@ -22,10 +25,19 @@ public class Gerbils18 {
 		gerbils.put("Wowee", new Gerbil(9));
 		System.out.println(gerbils);
 		System.out.println();
+		
+//		Set<String> sortedKeys = 
+//			new TreeSet<String>(gerbils.keySet());
+		
+//		Set<String> sortedKeys = 
+//			new HashSet<String>(gerbils.keySet());
+		
 		Set<String> sortedKeys = 
-			new TreeSet<String>(gerbils.keySet());
+				new LinkedHashSet<String>(gerbils.keySet());
+		
 		System.out.println(sortedKeys);
 		System.out.println();
+		
 		Map<String, Gerbil> sortedGerbils = 
 			new LinkedHashMap<String, Gerbil>();
 		for(String s : sortedKeys) {

@@ -1,6 +1,6 @@
 1.Arrays.asList() 数组转化为集合
 2.Collections.addAll 返回true or false     
-　Collections.sort()排序　　　
+　Collections.sort()排序　　　Collections.sort(words, String.CASE_INSENSITIVE_ORDER);
 　Collections.shuffle()混淆
 3.list.set(1,"")
   list.subList(1,4) 

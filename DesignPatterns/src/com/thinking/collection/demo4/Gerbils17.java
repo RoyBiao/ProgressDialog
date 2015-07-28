@@ -33,12 +33,14 @@ public class Gerbils17 {
 		Iterator<String> it = gerbils.keySet().iterator();
 		
 		System.out.println(gerbils.keySet());
-//		while(it.hasNext()) {
-//			String s = it.next();
-//			System.out.print(s + ": ");
-//			gerbils.get(s).hop();
-//		}	
-//		
+		while(it.hasNext()) {
+			String s = it.next();
+			System.out.print(s + ": ");
+			gerbils.get(s).hop();
+		}	
+
+		System.err.println();
+		
 		for(String s:gerbils.keySet()){
 			System.out.print(s + ": ");
 			gerbils.get(s).hop();
