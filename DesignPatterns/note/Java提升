@@ -17,7 +17,10 @@
 	Set:HashSet,TreeSet,LinkHashSet
   Map:
     HashMap,TreeMap,LinkedHashMap
-
+8.Queue<Integer> queue = new LinkedList<Integer>();
+9.PriorityQueue (Integer,String,Charater) 自然排序
+10.extends AbstractCollection (实现　public Iterator<Pet> iterator()方法); implements Collection<Pet> ;
+11.implements Iterable<String> 
 
 1.Class.getInterfaces()
   Class.isInterface()
