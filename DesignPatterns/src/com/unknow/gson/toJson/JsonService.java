@@ -32,6 +32,11 @@ public class JsonService {
 		map.put("id", "1001");
 		map.put("name", "jack");
 		map.put("address", "beijing");
+		List<String> list2 = new ArrayList<String>();
+		list2.add("a");
+		list2.add("b");
+		list2.add("c");
+		map.put("list2", list2);
 		return map;
 	}
 
@@ -53,8 +58,15 @@ public class JsonService {
 		map2.put("id", 1002);
 		map2.put("name", "rose");
 		map2.put("address", "guangdong");
+		Map<String, Object> map3 = new HashMap<String, Object>();
+		List<String> list2 = new ArrayList<String>();
+		list2.add("a");
+		list2.add("b");
+		list2.add("c");
+		map3.put("id", list2);
 		list.add(map1);
 		list.add(map2);
+		list.add(map3);
 		return list;
 	}
 
