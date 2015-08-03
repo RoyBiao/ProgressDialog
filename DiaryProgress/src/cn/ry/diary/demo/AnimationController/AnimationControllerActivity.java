@@ -31,7 +31,7 @@ public class AnimationControllerActivity extends Activity{
 	}
 	
 	public void scaleOut(View view){
-		AnimationController.scaleOut(imageView, 1000, 200);
+		AnimationController.scaleIn(imageView, 1000, 200);
 	}
 	
 	public void rotateIn(View view){
@@ -57,4 +57,6 @@ public class AnimationControllerActivity extends Activity{
 	public void slideFadeOut(View view){
 		AnimationController.slideFadeOut(imageView, 1000, 200);
 	}
+	
+	
 }
