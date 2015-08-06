@@ -6,10 +6,10 @@ import java.util.List;
 import java.util.Map;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
 public class GsonUtils {
-
 
 	/**
 	 * @param object
@@ -17,11 +17,13 @@ public class GsonUtils {
 	 * @return
 	 */
 	public static String toJsonString(Object value) {
-		Gson gson = new Gson();
-		String str = gson.toJson(value);
+		GsonBuilder gb = new GsonBuilder();
+		gb.disableHtmlEscaping();
+		gb.create().toJson(value);
+		String str = gb.create().toJson(value);
 		return str;
 	}
-	
+
 	/**
 	 * 获取单个对象
 	 * 
