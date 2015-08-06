@@ -76,6 +76,7 @@ public class NonCollectionSequence extends PetSequence implements Iterable<Pet> 
 		while(iterator3.hasNext()){
 			System.out.print(iterator3.next()+" ");
 		}
+		
 	}
 } /*
  * Output: 0:Rat 1:Manx 2:Cymric 3:Mutt 4:Pug 5:Cymric 6:Pug 7:Manx
