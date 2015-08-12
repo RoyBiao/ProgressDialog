@@ -8,6 +8,7 @@ import cn.ry.diary.R;
 import cn.ry.diary.demo2.common.adapter.CommonAdapterActivity;
 import cn.ry.diary.demo2.guideview.GuideViewActivity;
 import cn.ry.diary.demo2.guideview2.GuideView2Activity;
+import cn.ry.diary.demo2.horizontallistView.MainActivity;
 import cn.ry.diary.demo2.imageWidget.ImagesWidgetConfiguration;
 import cn.ry.diary.demo2.inflater.LayoutInflaterActivity;
 import cn.ry.diary.demo2.webview.js.WebViewJSActivity;
@@ -38,6 +39,9 @@ public class Demo2Activity extends Activity {
 			startActivity(new Intent(this, ImagesWidgetConfiguration.class));
 		case R.id.WebViewJsBt:
 			startActivity(new Intent(this, WebViewJSActivity.class));
+			break;
+		case R.id.HorizontalListView:
+			startActivity(new Intent(this, MainActivity.class));
 			break;
 		default:
 			break;

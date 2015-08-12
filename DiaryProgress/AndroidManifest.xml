@@ -68,6 +68,8 @@
         </activity>
         <activity android:name="cn.ry.diary.demo2.guideview2.GuideView2Activity" >
         </activity>
+        <activity android:name="cn.ry.diary.demo2.horizontallistView.MainActivity" >
+        </activity>
         <activity android:name="cn.ry.diary.demo.DemoActivity" >
         </activity>
         <activity
@@ -89,7 +91,6 @@
                 android:name="android.appwidget.provider"
                 android:resource="@xml/imageswidget_info" />
         </receiver>
-
     </application>
 
 </manifest>
