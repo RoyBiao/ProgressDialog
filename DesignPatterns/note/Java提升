@@ -1,31 +1,46 @@
-1.Arrays.asList() æ•°ç»„è½¬åŒ–ä¸ºé›†åˆ
-2.Collections.addAll è¿”å›true or false     
-ã€€Collections.sort()æ’åºã€€ã€€ã€€Collections.sort(words, String.CASE_INSENSITIVE_ORDER);
-ã€€Collections.shuffle()æ··æ·†
+Ò»¡¢³ÖÓĞ¶ÔÏó
+1.Arrays.asList() Êı×é×ª»¯Îª¼¯ºÏ
+2.Collections.addAll ·µ»Øtrue or false     
+¡¡Collections.sort()ÅÅĞò¡¡¡¡¡¡Collections.sort(words, String.CASE_INSENSITIVE_ORDER);
+¡¡Collections.shuffle()»ìÏı
 3.list.set(1,"")
   list.subList(1,4) 
   list.containtAll(list2) 
-  list.addAll(2,list2)ä»ç¬¬ä¸‰ä¸ªä½ç½®å¼€å§‹æ·»åŠ æ‰€æœ‰çš„list2  
-  list.toArray(new Pet[0]) é›†åˆè½¬åŒ–ä¸ºæ•°ç»„ï¼Œå¦‚ä½•åˆ›å»ºçš„æ•°ç»„å¤§å°å°äºlistçš„å¤§å°ï¼Œä¼šè‡ªåŠ¨åŒ¹é…åˆé€‚å¤§å°çš„æ•°ç»„
-ã€€list.indexOf(Object o)ã€€å¯¹è±¡oåœ¨listæ‰€å¤„çš„ç´¢å¼•
-4.è¿­ä»£å™¨ç»Ÿä¸€äº†å¯¹å®¹å™¨çš„è®¿é—®æ–¹å¼  Iterator add()å’Œset()çš„åŒºåˆ«
+  list.addAll(2,list2)´ÓµÚÈı¸öÎ»ÖÃ¿ªÊ¼Ìí¼ÓËùÓĞµÄlist2  
+  list.toArray(new Pet[0]) ¼¯ºÏ×ª»¯ÎªÊı×é£¬ÈçºÎ´´½¨µÄÊı×é´óĞ¡Ğ¡ÓÚlistµÄ´óĞ¡£¬»á×Ô¶¯Æ¥ÅäºÏÊÊ´óĞ¡µÄÊı×é
+¡¡list.indexOf(Object o)¡¡¶ÔÏóoÔÚlistËù´¦µÄË÷Òı
+4.µü´úÆ÷Í³Ò»ÁË¶ÔÈİÆ÷µÄ·ÃÎÊ·½Ê½  Iterator add()ºÍset()µÄÇø±ğ
 5.ListIterator ,listIterator() , hasNext() , next() , nextIndex() , previousIndex() , previous() ,listIterator(3)
-6.TreeSet<String> set1 = new TreeSet<String>();//æŒ‰å­—å…¸æ’åº
-  TreeSet<String> set2 = new TreeSet<String>(String.CASE_INSENSITIVE_ORDER);//æŒ‰å­—æ¯æ’åº
+6.TreeSet<String> set1 = new TreeSet<String>();//°´×ÖµäÅÅĞò
+  TreeSet<String> set2 = new TreeSet<String>(String.CASE_INSENSITIVE_ORDER);//°´×ÖÄ¸ÅÅĞò
 7.Collection:
 	List:ArrayList,LinkedList
 	Set:HashSet,TreeSet,LinkHashSet
   Map:
     HashMap,TreeMap,LinkedHashMap
 8.Queue<Integer> queue = new LinkedList<Integer>();
-9.PriorityQueue (Integer,String,Charater) è‡ªç„¶æ’åº
-10.extends AbstractCollection (å®ç°ã€€public Iterator<Pet> iterator()æ–¹æ³•); implements Collection<Pet> ;
+9.PriorityQueue (Integer,String,Charater) ×ÔÈ»ÅÅĞò
+10.extends AbstractCollection (ÊµÏÖ¡¡public Iterator<Pet> iterator()·½·¨); implements Collection<Pet> ;
 11.implements Iterable<String> 
 
+¶ş¡¢Òì³£´¦Àí
+1.Òì³££ºÖÕÖ¹Ä£ĞÍºÍ»Ö¸´Ä£ĞÍ£¨Ìá³«ÖÕÖ¹Ä£ĞÍ£©
+2.Òì³£Óë¼ÇÂ¼ÈÕÖ¾
+3.²¶»ñËùÓĞÒì³££ºÕ»¹ì¼£¡¢ÖØĞÂÅ×³öÒì³£¡¢Òì³£Á´(Òì³£ÀÛ¼Ó£¬±£´æÔ­ÓĞµÄÒì³£²¢Å×³öĞÂµÄÒì³£)
+4.Java±ê×¼Òì³£ (RuntimeException)£¨±àÒëÆ÷²»ĞèÒªÒì³£ËµÃ÷£©
+5.Ê¹ÓÃfinally½øĞĞÇåÀíÊı¾İ£º1)»Ö¸´µ½×î³õ×´Ì¬¡¢2)ÔÚreturn£¬continue£¬breakÖĞÊ¹ÓÃ
+  Òì³£¶ªÊ§
+6.¼Ì³ĞµÄ»ùÀàºÍ½Ó¿ÚÓµÓĞÏàÍ¬µÄ·½·¨²»Í¬µÄÒì³£ĞÅÏ¢£¬ÒÔ»ùÀàµÄÎª×¼;
+¡¡×ÓÀàºÍ»ùÀàÓµÓĞÏàÍ¬µÄ·½·¨²»Í¬µÄÒì³£ĞÅÏ¢£¬ÒÔ×ÓÀàµÄÎª×¼£»ËùÓĞ»á³öÏÖÒì³£µÄ¶ªÊ§¡£
+
+Èı¡¢ÀàĞÍĞÅÏ¢
 1.Class.getInterfaces()
   Class.isInterface()
   Class.getSuperclass()
-  Class.newInstance()(å¿…éœ€å«æœ‰é»˜è®¤æ„é€ å™¨) ï¼ŒClass.forName("") (è·å–classå¯¹è±¡çš„å¼•ç”¨çš„ä¸€ç§æ–¹æ³•,ç«‹å³åˆå§‹åŒ–) ï¼Œ å…·ä½“ç±».Class()(ä¸ä¼šç«‹å³åˆå§‹åŒ–ï¼ŒåŠ è½½ã€é“¾æ¥ã€åˆå§‹åŒ–)
+  Class.newInstance()(±ØĞèº¬ÓĞÄ¬ÈÏ¹¹ÔìÆ÷) £¬Class.forName("") (»ñÈ¡class¶ÔÏóµÄÒıÓÃµÄÒ»ÖÖ·½·¨,Á¢¼´³õÊ¼»¯) £¬ ¾ßÌåÀà.Class()(²»»áÁ¢¼´³õÊ¼»¯£¬¼ÓÔØ¡¢Á´½Ó¡¢³õÊ¼»¯)
   Class.isAssignableFrom()
-2.å¦‚æœä¸€ä¸ªstaticåŸŸä¸æ˜¯finalï¼Œé‚£ä¹ˆåœ¨å¯¹å®ƒè¿›è¡Œè®¿é—®æ—¶ï¼Œæ€»æ˜¯è¦æ±‚å®ƒåœ¨è¢«è¯»å–ä¹‹å‰ï¼Œè¦å…ˆè¿›è¡Œé“¾æ¥(åˆ†é…å­˜å‚¨ç©ºé—´)å’Œåˆå§‹åŒ–ï¼ˆåˆå§‹åŒ–å­˜å‚¨ç©ºé—´ï¼‰ã€‚
+2.Èç¹ûÒ»¸östaticÓò²»ÊÇfinal£¬ÄÇÃ´ÔÚ¶ÔËü½øĞĞ·ÃÎÊÊ±£¬×ÜÊÇÒªÇóËüÔÚ±»¶ÁÈ¡Ö®Ç°£¬ÒªÏÈ½øĞĞÁ´½Ó(·ÖÅä´æ´¢¿Õ¼ä)ºÍ³õÊ¼»¯£¨³õÊ¼»¯´æ´¢¿Õ¼ä£©¡£
 
+ËÄ¡¢·ºĞÍ
+£±£®·ºĞÍ·½·¨
+¡¡¡¡1)ÀàĞÍÍÆ¶Ï²ÎÊı£¬2)¿É±ä²ÎÊıºÍ·ºĞÍ·½·¨

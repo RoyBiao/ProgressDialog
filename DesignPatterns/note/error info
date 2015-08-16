@@ -1,4 +1,4 @@
-1.ä½¿ç”¨å…¨å±€å˜é‡é€šè¿‡å‘é€æ¶ˆæ¯å­˜å–å±€éƒ¨å˜é‡ï¼ˆobjï¼‰çš„å€¼
+1.Ê¹ÓÃÈ«¾Ö±äÁ¿Í¨¹ı·¢ËÍÏûÏ¢´æÈ¡¾Ö²¿±äÁ¿£¨obj£©µÄÖµ
 04-20 13:43:41.745: E/ZQLog(30915): java.lang.IllegalStateException: The content of the adapter has changed but ListView did not receive a notification. Make sure the content of your adapter is not modified from a background thread, but only from the UI thread. Make sure your adapter calls notifyDataSetChanged() when its content changes. [in ListView(-1, class android.widget.ListView) with Adapter(class android.widget.HeaderViewListAdapter)]
 
 
