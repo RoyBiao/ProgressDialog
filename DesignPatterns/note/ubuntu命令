@@ -1,13 +1,12 @@
-1.cp â€r dir1 dir2,é€’å½’å¤åˆ¶å‘½ä»¤(å¤åˆ¶å­ç›®å½•ä¿¡æ¯)
-2.shutdown -h 10:42 'Hey! Go away!' 10:42 åˆ†å…³æœº 
-3.sudo gparted ç£ç›˜ç®¡ç†å·¥å…·
-4.dconf-editor é…ç½®ç¼–è¾‘å™¨(è§£å†³ä¹±ç )
-5.meld ä»£ç æ¯”è¾ƒï¼ˆsudo apt-get intall meldï¼‰
+1.cp ©\r dir1 dir2,µİ¹é¸´ÖÆÃüÁî(¸´ÖÆ×ÓÄ¿Â¼ĞÅÏ¢)
+2.shutdown -h 10:42 'Hey! Go away!' 10:42 ·Ö¹Ø»ú 
+3.sudo gparted ´ÅÅÌ¹ÜÀí¹¤¾ß
+4.dconf-editor ÅäÖÃ±à¼­Æ÷(½â¾öÂÒÂë)
+5.meld ´úÂë±È½Ï£¨sudo apt-get intall meld£©
 6.vi ~/.bashrc
   source ~./bashrc     ( /etc/profile)
- 	ä¾‹å¦‚ï¼š
+ 	ÀıÈç£º
 	export NDK_HOME=/home/ruibiao/soft/android/android-ndk-r10b
 	export PATH=$NDK_HOME:$PATH
 7.grep -rn "ZQParamsExt" .
-8.ps è¿›ç¨‹ç›‘æ§ ï¼ˆps | grep monkeyï¼‰
-
+8.ps ½ø³Ì¼à¿Ø £¨ps | grep monkey£©
