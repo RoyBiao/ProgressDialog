@@ -94,4 +94,47 @@ setGID=2   所属组
 粘着位=1    其它人
 例如：chmod  4755  /bin/touch
 
+九、用户管理
+1.useradd username    创建用户
+2.passwd username   设置密码
+3.groupadd groupname   创建组 		groupdel groupname 删除组
+4.grep groupname /etc/group   查看组信息
+5.usermod -G groupname username   用户chongshi添加到组testing
+6.chgrp groupname  /cnblogs   将/cnblogs目录的所属组改为testing(组有什么样的权限，组中成员也有什么样的权限。)
+7.usermod -s /bin/bash username  更改username用户的shell
+8.usermod -L username  禁用账号		usermod -U username　恢复账号
+9.passwd -l username　 禁用密码		passwd -u username　 恢复密码
+10.vigr 编辑/etc/group文件（锁定文件）在编辑group文件时，禁止其他人编辑。防止多人写操作，造成写混乱。
+11.vipw	编辑/etc/passwd文件（锁定文件）在编辑passwd文件时，禁止其他人编辑。防止多人写操作，造成写混乱。
+12.groups username　　  查看用户隶属于哪些用户组
+13.
+root@fnngj-virtual-machine:/# gpasswd -a tom webadmin     添加用户到组
+root@fnngj-virtual-machine:/# gpasswd -d tom webadmin     把用户从组中删除
+root@fnngj-virtual-machine:/# gpasswd webadmin                给用户组设置密码
+root@fnngj-virtual-machine:/# gpasswd -A tom webadmin    将tom提升为组管理员
+root@fnngj-virtual-machine:/# gpasswd -r webadmin  　　    删除组密码
+root@fnngj-virtual-machine:/# gpasswd -R webadmin  　　   禁止其他用户切换到该组
+
+
+孤儿进程：父进程死了，子进程变为孤儿进程
+僵尸进程：子进程死了，父进程变为僵尸进程
+
+
+/etc/rc.d/init.d/httpd start 启动进程
+/etc/rc.d/init.d/httpd stop　关闭进程
+
+which at 查看命令的路径
+
+crontab
+*/2 每隔两分钟　
+出错信息
+命令应该给出绝对路径
+
+standalone 独立运行
+xinetd 进程管理
+std,crond 计划任务（精确到秒）
+
+
+
+
 	
