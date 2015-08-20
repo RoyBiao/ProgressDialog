@@ -76,4 +76,22 @@ srwxrwxrwx  1 mysql mysql 0  2月 27 22:35 mysql.sock
 3.错误输出重定向
     假如，我要对一个目录进行备份（/usr），备份到/backup/usr.bak目录下，可以备份时间要很久，我不想一直盯着屏幕看，这时我就可以设置，如果备份时发生错误，将错误信息保存到/bak.error文件中。这样我就可以找朋友喝喝茶，聊聊天，回来看错误信息就可以了。
 [root@localhost ~]# cp -R /usr  /backup/usr.bak 2> /bak.error
+
+七、用户信息与密码的配置文件 
+用户信息文件：/etc/passwd  （grep root /etc/passwd  /etc/shadow）
+密码文件：/etc/shadow
+用户组文件：/etc/group
+用户组密码文件：/etc/gshadow
+用户配置文件：
+   /etc/login.defs
+   /etc/default/useradd
+新用户信息文件：/etc/skel
+登录信息：/etc/motd
+
+八、“会灵魂附体的”命令权限 
+setUID=4   所有人
+setGID=2   所属组
+粘着位=1    其它人
+例如：chmod  4755  /bin/touch
+
 	
