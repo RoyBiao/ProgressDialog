@@ -1,10 +1,13 @@
 package cn.ry.diary;
 
+import java.security.Permission;
+
 import cn.ry.diary.demo.DemoActivity;
 import cn.ry.diary.demo2.Demo2Activity;
 import cn.ry.diary.demo2.common.adapter.CommonAdapterActivity;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.PermissionInfo;
 import android.os.Bundle;
 import android.view.View;
 

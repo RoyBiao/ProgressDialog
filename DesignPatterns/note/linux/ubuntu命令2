@@ -1,0 +1,63 @@
+孤儿进程：父进程死了，子进程变为孤儿进程
+僵尸进程：子进程死了，父进程变为僵尸进程
+
+
+/etc/rc.d/init.d/httpd start 启动进程
+/etc/rc.d/init.d/httpd stop　关闭进程
+
+which at 查看命令的路径
+
+crontab
+*/2 每隔两分钟　
+出错信息
+命令应该给出绝对路径
+
+standalone 独立运行
+xinetd 进程管理
+std,crond 计划任务（精确到秒）
+
+&	后台进程
+
+一个存放内存中的特殊目录/proc  
+
+1.ps(ps -le/-aue | grep init 查看指定进程信息)  	
+		PID :　    　进程号
+		PPLD：　　 父进程的进程号
+		TTY ：　　  进程启动的终端
+		STAT ：　　进程当前状态（S休眠状态，D不可中断的休眠状态，R运行状态，Z僵死状态，T停止）
+		NI ：　　      进程优先级
+		TIME：　　   进程自从启动以后启用CPU的总时间
+		COMMAND/CMD：进程的命令名
+		USER：　　  用户名
+		%CPU：　　 占用CPU时间和总时间的百分比
+		%MEM：　　占用内存与系统内存总量的百分比
+
+2.进程的优先级    
+优先级取值范围为（-20，19）
+linux给我们提供的优先级的范围为-20到19，我们启动一个进程时，默认的优先级为0 ，-20的优先级为最大，或者说最高。当然，我们在设置的时候可以写-30，但系统默认为-20。
+nice命令 
+	指定程序的运行优先级
+	格式：nice -n command
+	例如：nice --5 command
+renice 命令
+	改变一个正在运行的进程的优先级
+	格式： renice n pid
+	例如：renice -5 777
+nohup命令可以在用户退出时继续执行某一进程
+
+3.jobs bg fg kill
+  通过top命令查看进程  
+
+4.at命令指定时间的方式:hh:mm MM/DD/YY,使用ctr+d保存   
+  at -l
+  atq
+  at -d
+  
+5.周期性计划命令crontab
+  crontab {-l|-r|-e}
+	-l 　　显示当前的crontab
+	-r 　　删除当前的crontab
+	-e 　　使用编辑器编辑当前crontab文件
+select-editor
+      	
+

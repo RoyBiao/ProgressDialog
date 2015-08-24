@@ -114,27 +114,3 @@ root@fnngj-virtual-machine:/# gpasswd webadmin                给用户组设置密码
 root@fnngj-virtual-machine:/# gpasswd -A tom webadmin    将tom提升为组管理员
 root@fnngj-virtual-machine:/# gpasswd -r webadmin  　　    删除组密码
 root@fnngj-virtual-machine:/# gpasswd -R webadmin  　　   禁止其他用户切换到该组
-
-
-孤儿进程：父进程死了，子进程变为孤儿进程
-僵尸进程：子进程死了，父进程变为僵尸进程
-
-
-/etc/rc.d/init.d/httpd start 启动进程
-/etc/rc.d/init.d/httpd stop　关闭进程
-
-which at 查看命令的路径
-
-crontab
-*/2 每隔两分钟　
-出错信息
-命令应该给出绝对路径
-
-standalone 独立运行
-xinetd 进程管理
-std,crond 计划任务（精确到秒）
-
-
-
-
-	

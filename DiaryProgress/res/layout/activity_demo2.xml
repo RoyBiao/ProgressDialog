@@ -51,4 +51,10 @@
         android:layout_height="wrap_content"
         android:onClick="onClickItem"
         android:text="HorizontalListView" />
+ <Button
+        android:id="@+id/permission"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickItem"
+        android:text="permission" />
 </LinearLayout>
