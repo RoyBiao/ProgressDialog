@@ -2,34 +2,67 @@
 // Demonstrates the switch statement.
 package com.thinking.enumerated.demo07;
 
+import static com.thinking.util.Print.print;
+import static com.thinking.util.Print.printnb;
+
 import java.util.Random;
-import static com.thinking.util.Print.*;
 
 public class VowelsAndConsonants {
 	enum ZIMU {
-		VOVEL, SOMETIMES_A_VOVEL, INSTANCE;
+		VOVEL('a', 'e', 'i', 'o', 'u'), SOMETIMES_A_VOVEL('y', 'w'), INSTANCE;
+		char[] cs = null;
+
+		ZIMU(char... cs) {
+			for (int i = 0; i < cs.length; i++) {
+				System.out.println(cs[i]);
+			}
+			this.cs = cs;
+		}
+	}
+
+	public static ZIMU getChar(char c) {
+		for (int i = 0; i < ZIMU.VOVEL.cs.length; i++) {
+			if(c== ZIMU.VOVEL.cs[i]){
+				return ZIMU.VOVEL;
+			}
+		}
 		
+		for (int i = 0; i < ZIMU.SOMETIMES_A_VOVEL.cs.length; i++) {
+			if(c== ZIMU.SOMETIMES_A_VOVEL.cs[i]){
+				return ZIMU.SOMETIMES_A_VOVEL;
+			}
+		}
+		
+		return ZIMU.INSTANCE;
+		
+		
+//		if (Arrays.asList(ZIMU.VOVEL.cs).contains(c)) {
+//			return ZIMU.VOVEL;
+//		} else if (Arrays.asList(ZIMU.SOMETIMES_A_VOVEL.cs).contains(c)) {
+//			return ZIMU.SOMETIMES_A_VOVEL;
+//		} else {
+//			return ZIMU.INSTANCE;
+//		}
 	}
 
 	public static void main(String[] args) {
 		Random rand = new Random(47);
 		for (int i = 0; i < 100; i++) {
 			int c = rand.nextInt(26) + 'a';
+			ZIMU zimu = getChar((char) c);
 			printnb((char) c + ", " + c + ": ");
-			switch (c) {
-			case 'a':
-			case 'e':
-			case 'i':
-			case 'o':
-			case 'u':
+			switch (zimu) {
+			case VOVEL:
 				print("vowel");
 				break;
-			case 'y':
-			case 'w':
+			case SOMETIMES_A_VOVEL:
 				print("Sometimes a vowel");
 				break;
-			default:
+			case INSTANCE:
 				print("consonant");
+				break;
+			default:
+				break;
 			}
 		}
 	}
