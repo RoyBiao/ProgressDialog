@@ -47,3 +47,12 @@
 五、泛型
 １．泛型方法
 　　1)类型推断参数，2)可变参数和泛型方法
+
+六、枚举
+1.1)e.ordinal() ,e.compareTo() ,e.equals()
+  2)Enum.valueOf(Shrubbery.class, “”) 返回相应的enum实例,没有则抛出异常  , Enum.values() 数组 ，每个枚举的值
+  3)将静态导入用于enum
+2. e.getClass().getEnumConstants() 获取枚举值
+
+
+
