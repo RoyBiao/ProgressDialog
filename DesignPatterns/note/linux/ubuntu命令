@@ -10,12 +10,13 @@
 	export PATH=$NDK_HOME:$PATH
 7.grep -rn "ZQParamsExt" ./cn_hslive_zq_sdk_core_ZQCore.cpp
 8.ps 进程监控 （ps | grep monkey）
+9.sudo update-alternatives --config java  
 
 一、网络管理
 1.wget 下载文件
 2.mtr 路由跟踪
 3.host DNS查询
-4.ifplugstatus 可以告诉你是否有网线插到在网络接口上
+4.ifplugstatus 可以告诉你是否有网线插到在网络接口上 切换java版本
 
 二、文件查找：
 统配符 ？* 与windows下相同

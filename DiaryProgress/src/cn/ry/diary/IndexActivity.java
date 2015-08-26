@@ -30,6 +30,7 @@ public class IndexActivity extends Activity {
 			break;
 		default:
 			break;
+			
 		}
 	}
 }
