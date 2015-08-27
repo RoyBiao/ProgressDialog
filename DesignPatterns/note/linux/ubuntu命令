@@ -24,6 +24,10 @@
 	sudo apt-get install g++-4.4-multilib
 	然后继续编译  
 	zlib_dev
+11.ubuntu中android源码编译启动模拟器黑屏
+  如题，android源码编译启动模拟器黑屏，是什么原因啊，是如何来解决的？ 已经解决：我的命令如下： 
+  ./out/host/linux-x86/bin/emulator -partition-size 1024 -kernel ./prebuilt/android-arm/kernel/kernel-qemu-armv7 -sysdir ./out/target/product/generic -system system.img -data userdata.img -ramdisk ramdisk.img
+
   
 一、网络管理
 1.wget curl下载文件
