@@ -16,7 +16,7 @@
 7.Collection:
 	List:ArrayList,LinkedList
 	Set:HashSet,TreeSet,LinkHashSet
-  Map:
+  Map:（keySet()，values()，entrySet()）
     HashMap,TreeMap,LinkedHashMap
 8.Queue<Integer> queue = new LinkedList<Integer>();
 9.PriorityQueue (Integer,String,Charater) 自然排序
@@ -53,6 +53,10 @@
   2)Enum.valueOf(Shrubbery.class, “”) 返回相应的enum实例,没有则抛出异常  , Enum.values() 数组 ，每个枚举的值
   3)将静态导入用于enum
 2. e.getClass().getEnumConstants() 获取枚举值
+3.EnumSet EnumMap 结合Enum速度快
+4.常量相关方法(为Enum添加抽象方法) 
+  1）使用Enum的职责链		2）使用enum的状态机
+  
 
 
 

@@ -1,6 +1,8 @@
 //: enumerated/menu/Meal.java
 package com.thinking.enumerated.demo07;
 
+import com.thinking.enumerated.demo07.food.Food;
+
 public class Meal {
 	public static void main(String[] args) {
 		for (int i = 0; i < 5; i++) {

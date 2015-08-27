@@ -34,15 +34,6 @@ public class VowelsAndConsonants {
 		}
 		
 		return ZIMU.INSTANCE;
-		
-		
-//		if (Arrays.asList(ZIMU.VOVEL.cs).contains(c)) {
-//			return ZIMU.VOVEL;
-//		} else if (Arrays.asList(ZIMU.SOMETIMES_A_VOVEL.cs).contains(c)) {
-//			return ZIMU.SOMETIMES_A_VOVEL;
-//		} else {
-//			return ZIMU.INSTANCE;
-//		}
 	}
 
 	public static void main(String[] args) {

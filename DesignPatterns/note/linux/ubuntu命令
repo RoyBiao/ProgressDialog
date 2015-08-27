@@ -10,10 +10,23 @@
 	export PATH=$NDK_HOME:$PATH
 7.grep -rn "ZQParamsExt" ./cn_hslive_zq_sdk_core_ZQCore.cpp
 8.ps 进程监控 （ps | grep monkey）
-9.sudo update-alternatives --config java  
-
+9.选择JDK
+  sudo update-alternatives --config java
+  sudo update-alternatives --config javac  
+  设置JDK的优先级
+  sudo update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/jdk1.7.0_79/bin/javac 301
+  sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk1.7.0_79/bin/java 301
+10.在用Ubuntu 12.04 64bit系统编译android 2.3代码时，发现由于gcc和g++为4.6与android要求不兼容，因此需要
+	sudo apt-get install gcc-4.4
+	sudo apt-get install g++-4.4
+	并且，动态切换为4.4版本
+   然后继续编译，期间可能还发生g++ selected multilib '32' not installed的错误，需要：
+	sudo apt-get install g++-4.4-multilib
+	然后继续编译  
+	zlib_dev
+  
 一、网络管理
-1.wget 下载文件
+1.wget curl下载文件
 2.mtr 路由跟踪
 3.host DNS查询
 4.ifplugstatus 可以告诉你是否有网线插到在网络接口上 切换java版本
