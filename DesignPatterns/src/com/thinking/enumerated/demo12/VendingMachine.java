@@ -19,6 +19,11 @@ import java.util.Iterator;
 import com.thinking.typeinfo.demo2.Generator;
 import com.unknow.regex.TextFile;
 
+/**
+ * 编程思想练习题10、11
+ * @author ruibiao
+ *
+ */
 enum Category {
 	MONEY(NICKEL, DIME, QUARTER, DOLLAR), ITEM_SELECTION(TOOTHPASTE, CHIPS,
 			SODA, SOAP), QUIT_TRANSACTION(ABORT_TRANSACTION), SHUT_DOWN(STOP);

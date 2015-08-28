@@ -1,7 +1,11 @@
 //: enumerated/PostOffice.java
 // Modeling a post office.
 package com.thinking.enumerated.demo11;
-
+/**
+ * 编程思想练习题9
+ * @author ruibiao
+ *
+ */
 import static com.thinking.util.Print.print;
 
 import java.util.Iterator;
