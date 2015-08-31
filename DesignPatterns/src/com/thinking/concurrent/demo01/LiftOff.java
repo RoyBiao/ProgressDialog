@@ -24,5 +24,6 @@ public class LiftOff implements Runnable {
 			System.out.print(status());
 			Thread.yield();
 		}
+		//System.out.println();
 	}
 } // /:~

@@ -1,0 +1,19 @@
+1.在用Ubuntu 12.04 64bit系统编译android 2.3代码时，发现由于gcc和g++为4.6与android要求不兼容，因此需要
+	sudo apt-get install gcc-4.4
+	sudo apt-get install g++-4.4
+	并且，动态切换为4.4版本
+   然后继续编译，期间可能还发生g++ selected multilib '32' not installed的错误，需要：
+	sudo apt-get install g++-4.4-multilib
+	然后继续编译  
+	zlib_dev
+2.ubuntu中android源码编译启动模拟器黑屏
+  如题，android源码编译启动模拟器黑屏，是什么原因啊，是如何来解决的？ 已经解决：我的命令如下： 
+  ./out/host/linux-x86/bin/emulator -partition-size 1024 -kernel ./prebuilt/android-arm/kernel/kernel-qemu-armv7 -sysdir ./out/target/product/generic -system system.img -data userdata.img -ramdisk ramdisk.img
+3.Android源码，编译也通过了，可以正常启动模拟器。但是Android源码内是不包含kernel源码的模拟器，添加自己新编译的内核就启动不了.
+  默认情况下启动模拟器选择的kernel的位置是这里：PWD_PATH/prebuilt/android-arm/kernel/kernel-qemu-armv7
+        网上找了一下，原来是这样的，我下载的源码是2.3.1版本（内核版本是goldfish），而4.0版本一下的编译内核时候时候配置文件是：make goldfish_defconfig，4.0以上的版本的系统需要ARMv7架构或者以上才能运行，但是4.0以下的不许要。
+        而我却用了meke goldfish_armv7_defconfig，所以不能运行。
+        进入内核根目录，make clean一下
+        然后make goldfish_defconfig
+        再make -j4
+        等待完成就OK了。
