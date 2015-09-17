@@ -11,6 +11,7 @@ import cn.ry.diary.demo2.guideview2.GuideView2Activity;
 import cn.ry.diary.demo2.horizontallistView.MainActivity;
 import cn.ry.diary.demo2.imageWidget.ImagesWidgetConfiguration;
 import cn.ry.diary.demo2.inflater.LayoutInflaterActivity;
+import cn.ry.diary.demo2.input.HidenInput;
 import cn.ry.diary.demo2.permission.PermissionActivity;
 import cn.ry.diary.demo2.webview.js.WebViewJSActivity;
 
@@ -47,6 +48,10 @@ public class Demo2Activity extends Activity {
 		case R.id.permission:
 			startActivity(new Intent(this, PermissionActivity.class));
 			break;
+		case R.id.hidenInput:
+			startActivity(new Intent(this, HidenInput.class));
+			break;
+
 		default:
 			break;
 		}

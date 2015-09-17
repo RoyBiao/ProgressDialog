@@ -1,0 +1,12 @@
+1.ListView 局部更新
+	 private void updateSingleRow(ListView listView, long id) {  
+            if (listView != null) {  
+                int start = listView.getFirstVisiblePosition();  
+                for (int i = start, j = listView.getLastVisiblePosition(); i <= j; i++)  
+                    if (id == ((Messages) listView.getItemAtPosition(i)).getId()) {  
+                        View view = listView.getChildAt(i - start);  
+                        getView(i, view, listView);  
+                        break;  
+                    }  
+            }  
+        }  

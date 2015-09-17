@@ -1,9 +1,9 @@
 package com.gc.flashview.effect;
 
-import com.nineoldandroids.view.ViewHelper;
-
 import android.support.v4.view.ViewPager.PageTransformer;
 import android.view.View;
+
+import com.nineoldandroids.view.ViewHelper;
 
 public class CubeTransformer implements PageTransformer {
 	

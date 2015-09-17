@@ -1,9 +1,9 @@
 package cn.ry.diary.demo2.guideview;
 
-import cn.ry.diary.R;
 import android.app.Activity;
 import android.os.Bundle;
 import android.widget.Button;
+import cn.ry.diary.R;
 
 public class GuideViewActivity extends Activity {
 	ButtonClickGuideOverlay mGuideOverlay;

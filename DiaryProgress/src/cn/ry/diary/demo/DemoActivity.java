@@ -1,6 +1,5 @@
 package cn.ry.diary.demo;
 
-import java.util.Iterator;
 import java.util.List;
 
 import android.content.Context;

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/count1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onItemClick"
+        android:text="count1" >
+    </Button>
+
+    <Button
+        android:id="@+id/count2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onItemClick"
+        android:text="count2" >
+    </Button>
+
+    <Button
+        android:id="@+id/count3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onItemClick"
+        android:text="count3" >
+    </Button>
+
+    <Button
+        android:id="@+id/exit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onItemClick"
+        android:text="exit" >
+    </Button>
+
+</LinearLayout>

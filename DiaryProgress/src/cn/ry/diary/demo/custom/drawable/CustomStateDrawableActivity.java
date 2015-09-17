@@ -12,23 +12,23 @@ import cn.ry.diary.demo.custom.drawable.widge.MessageListItem;
 
 public class CustomStateDrawableActivity extends ListActivity
 {
-	private Message[] messages = new Message[] {
-			new Message("Gas bill overdue", true),
-			new Message("Congratulations, you've won!", true),
-			new Message("I love you!", false),
-			new Message("Please reply!", false),
-			new Message("You ignoring me?", false),
-			new Message("Not heard from you", false),
-			new Message("Electricity bill", true),
-			new Message("Gas bill", true), new Message("Holiday plans", false),
-			new Message("Marketing stuff", false), };
+	private MyMessage[] messages = new MyMessage[] {
+			new MyMessage("Gas bill overdue", true),
+			new MyMessage("Congratulations, you've won!", true),
+			new MyMessage("I love you!", false),
+			new MyMessage("Please reply!", false),
+			new MyMessage("You ignoring me?", false),
+			new MyMessage("Not heard from you", false),
+			new MyMessage("Electricity bill", true),
+			new MyMessage("Gas bill", true), new MyMessage("Holiday plans", false),
+			new MyMessage("Marketing stuff", false), };
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
 
-		getListView().setAdapter(new ArrayAdapter<Message>(this, -1, messages)
+		getListView().setAdapter(new ArrayAdapter<MyMessage>(this, -1, messages)
 		{
 			private LayoutInflater mInflater = LayoutInflater
 					.from(getContext());

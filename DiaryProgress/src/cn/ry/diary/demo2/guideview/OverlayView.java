@@ -1,6 +1,5 @@
 package cn.ry.diary.demo2.guideview;
 
-import cn.ry.diary.R;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
@@ -11,6 +10,7 @@ import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
 import android.util.AttributeSet;
 import android.view.View;
+import cn.ry.diary.R;
 
 /**
  * Created by qluan on 2015/3/26.

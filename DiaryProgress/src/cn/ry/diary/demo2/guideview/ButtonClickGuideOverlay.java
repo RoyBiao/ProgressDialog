@@ -1,6 +1,5 @@
 package cn.ry.diary.demo2.guideview;
 
-import cn.ry.diary.R;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
@@ -10,6 +9,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import cn.ry.diary.R;
 
 
 /**
