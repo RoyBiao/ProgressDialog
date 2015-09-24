@@ -6,8 +6,11 @@ import android.os.Bundle;
 import android.view.View;
 import cn.ry.diary.R;
 import cn.ry.diary.demo3.IBinder.MyActivity;
+import cn.ry.diary.demo3.SlideView.MainActivity;
+import cn.ry.diary.demo3.aldl.client.AIDLClientActivity;
 import cn.ry.diary.demo3.cusorloader.CusorLoaderActivity;
 import cn.ry.diary.demo3.messager.MessagerActivity;
+import cn.ry.diary.demo3.touch.TouchActivity;
 
 public class Demo3Activity extends Activity {
 
@@ -28,7 +31,17 @@ public class Demo3Activity extends Activity {
 		case R.id.cusorLoader:
 			startActivity(new Intent(this, CusorLoaderActivity.class));
 			break;
+		case R.id.AIDLClient:
+			startActivity(new Intent(this, AIDLClientActivity.class));
+			break;
+		case R.id.slideview:
+			startActivity(new Intent(this, MainActivity.class));
+			break;
+		case R.id.touch:
+			startActivity(new Intent(this, TouchActivity.class));
+			break;
 		default:
+			
 			break;
 		}
 	}

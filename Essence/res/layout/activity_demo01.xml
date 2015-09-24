@@ -4,10 +4,10 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/demo01"
+        android:id="@+id/AIDLServiceBt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="demoOnClick"
-        android:text="demo01" />
+        android:onClick="demo01OnClick"
+        android:text="AIDLService" />
 
 </LinearLayout>
