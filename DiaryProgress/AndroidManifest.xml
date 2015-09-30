@@ -130,6 +130,8 @@
         </activity>
         <activity android:name="cn.ry.diary.demo3.touch.TouchActivity" >
         </activity>
+        <activity android:name="cn.ry.diary.demo3.Gesture.GestureActivity" >
+        </activity>
     </application>
 
 </manifest>

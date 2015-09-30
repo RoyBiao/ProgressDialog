@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import cn.ry.diary.R;
+import cn.ry.diary.demo3.Gesture.GestureActivity;
 import cn.ry.diary.demo3.IBinder.MyActivity;
 import cn.ry.diary.demo3.SlideView.MainActivity;
 import cn.ry.diary.demo3.aldl.client.AIDLClientActivity;
@@ -39,6 +40,9 @@ public class Demo3Activity extends Activity {
 			break;
 		case R.id.touch:
 			startActivity(new Intent(this, TouchActivity.class));
+			break;
+		case R.id.Gesture:
+			startActivity(new Intent(this, GestureActivity.class));
 			break;
 		default:
 			

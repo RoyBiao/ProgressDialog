@@ -45,4 +45,11 @@
         android:onClick="onClickItem"
         android:text="touch" />
 
+      <Button
+        android:id="@+id/Gesture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickItem"
+        android:text="Gesture" />
+     
 </LinearLayout>
