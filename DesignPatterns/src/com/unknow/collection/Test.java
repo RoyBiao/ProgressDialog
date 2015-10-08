@@ -14,6 +14,7 @@ public class Test {
 		bb.add(0, "bb");
 		bb.add(1, "bb");
 		
-		
+		int a=1/2;
+		System.out.println(a);
 	}
 }
