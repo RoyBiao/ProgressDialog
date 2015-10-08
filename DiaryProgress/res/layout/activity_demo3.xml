@@ -10,19 +10,46 @@
         android:layout_height="wrap_content"
         android:onClick="onClickItem"
         android:text="IBinderService" />
-    
+
     <Button
         android:id="@+id/MessengerService"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="onClickItem"
         android:text="MessengerService" />
-    
-     <Button
+
+    <Button
         android:id="@+id/cusorLoader"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="onClickItem"
         android:text="cusorLoader" />
 
+    <Button
+        android:id="@+id/AIDLClient"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickItem"
+        android:text="AIDLClient" />
+     <Button
+        android:id="@+id/slideview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickItem"
+        android:text="slideview" />
+     
+     <Button
+        android:id="@+id/touch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickItem"
+        android:text="touch" />
+
+      <Button
+        android:id="@+id/Gesture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickItem"
+        android:text="Gesture" />
+     
 </LinearLayout>

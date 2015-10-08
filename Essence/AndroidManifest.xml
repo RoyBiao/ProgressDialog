@@ -22,6 +22,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="cn.ry.essence.demo01.Demo01Activity" >
+        </activity>
+
+        <service android:name="cn.ry.essence.demo01.aidl.service.RemoteService" >
+            <intent-filter>
+                <action android:name="cn.ry.essence.demo01.aidl.service.RemoteService" />
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>
