@@ -51,5 +51,13 @@
         android:layout_height="wrap_content"
         android:onClick="onClickItem"
         android:text="Gesture" />
+      
+      
+      <Button
+        android:id="@+id/afinal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickItem"
+        android:text="afinal" />
      
 </LinearLayout>
