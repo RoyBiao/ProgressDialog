@@ -24,10 +24,38 @@
         android:text="httpGet" />
 
     <Button
-        android:id="@+id/httpSet"
+        android:id="@+id/httpGetWithParam"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="afinalClick"
-        android:text="httpSet" />
+        android:text="httpGetWithParam" />
+    
+    <Button
+        android:id="@+id/httpGetSync"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="afinalClick"
+        android:text="getSync" />
+    
+    <Button
+        android:id="@+id/httpPost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="afinalClick"
+        android:text="httpPost" />
+
+    <Button
+        android:id="@+id/httpPostWithParam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="afinalClick"
+        android:text="httpPostWithParam" />
+    
+     <Button
+        android:id="@+id/httpDownLoad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="afinalClick"
+        android:text="httpDownLoad" />
 
 </LinearLayout>

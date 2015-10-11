@@ -387,10 +387,9 @@ public class FinalHttp {
         if(contentType != null) {
             uriRequest.addHeader("Content-Type", contentType);
         }
-
+        System.out.println("uriRequest:"+uriRequest.getURI());
         new HttpHandler<T>(client, httpContext, ajaxCallBack,charset)
         .executeOnExecutor(executor, uriRequest);
-
     }
     
     protected Object sendSyncRequest(DefaultHttpClient client, HttpContext httpContext, HttpUriRequest uriRequest, String contentType) {
