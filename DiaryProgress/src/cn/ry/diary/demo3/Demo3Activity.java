@@ -9,6 +9,7 @@ import cn.ry.diary.demo3.Gesture.GestureActivity;
 import cn.ry.diary.demo3.IBinder.MyActivity;
 import cn.ry.diary.demo3.SlideView.MainActivity;
 import cn.ry.diary.demo3.afinal.AfinalActivity;
+import cn.ry.diary.demo3.afinal.InjectActivity;
 import cn.ry.diary.demo3.aldl.client.AIDLClientActivity;
 import cn.ry.diary.demo3.cusorloader.CusorLoaderActivity;
 import cn.ry.diary.demo3.messager.MessagerActivity;
@@ -47,6 +48,9 @@ public class Demo3Activity extends Activity {
 			break;
 		case R.id.afinal:
 			startActivity(new Intent(this, AfinalActivity.class));
+			break;
+		case R.id.afinalInject:
+			startActivity(new Intent(this, InjectActivity.class));
 			break;
 		default:
 			
