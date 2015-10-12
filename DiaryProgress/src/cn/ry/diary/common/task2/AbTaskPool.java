@@ -17,6 +17,7 @@ package cn.ry.diary.common.task2;
 
 import java.util.concurrent.Executor;
 
+import android.annotation.SuppressLint;
 import android.os.Handler;
 import android.os.Message;
 // TODO: Auto-generated Javadoc
@@ -56,19 +57,23 @@ public class AbTaskPool{
         return abTaskPool;
     } 
     
-    private Handler handler = new Handler(){
+    @SuppressLint("HandlerLeak")
+	private Handler handler = new Handler(){
     	public void handleMessage(Message msg) {
+    		System.out.println("Queue handle:"+Thread.currentThread().getName());
     		mExecutorService.execute((Runnable) msg.obj);
     	};
     };
     /**
-     * 线程池
+     * 线程队列
      * @param runnable 任务
      */
-    public void executeQueue(Runnable runnable){
-    	Message msg=Message.obtain();
-    	msg.obj=runnable;
-    	handler.sendMessage(msg);
+    public synchronized void executeQueue(Runnable runnable){
+//    	Message msg=Message.obtain();
+//    	msg.obj=runnable;
+//    	handler.sendMessage(msg);
+    	System.out.println("Queue handle:"+Thread.currentThread().getName());
+    	mExecutorService.execute(runnable);
     }
     
     /**

@@ -46,22 +46,27 @@ public class ThreadControlActivity extends Activity implements OnClickListener{
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.threadBtn:
-			cn.ry.diary.common.task2.AbTaskPool.getInstance().executeQueue(new Runnable() {
-				
+//			cn.ry.diary.common.task2.AbTaskPool.getInstance().executeQueue(new Runnable() {
+//				
+//				@Override
+//				public void run() {
+//					for(int i=0;i<100;i++){
+//						System.out.println("Queue:"+Thread.currentThread().getName()+"__"+i);
+//					}
+//					
+//				}
+//			});
+			AbTaskQueue queue1 =new AbTaskQueue();
+			AbTaskItem item1=new AbTaskItem(new AbTaskListener(){
 				@Override
-				public void run() {
-					try {
-						Thread.sleep(3000);
-					} catch (InterruptedException e) {
-						e.printStackTrace();
+				public void get() {
+					for(int i=0;i<10000;i++){
+						System.out.println("Queue:"+Thread.currentThread().getName()+"__"+i);
 					}
-					System.out.println();
-					for(int i=0;i<1000;i++){
-						System.out.print(Thread.currentThread().getName()+"hahahahaha"+i);
-					}
-					
 				}
 			});
+			
+			queue1.execute(item1);
 			break;
 		case R.id.queueBtn:
 			System.out.println("ddeddedede0");
