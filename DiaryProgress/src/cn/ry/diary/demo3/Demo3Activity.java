@@ -52,8 +52,11 @@ public class Demo3Activity extends Activity {
 		case R.id.afinalInject:
 			startActivity(new Intent(this, InjectActivity.class));
 			break;
+		case R.id.SwipeRefresh:
+			startActivity(new Intent(this, cn.ry.diary.demo3.SwipeRefresh.MainActivity.class));
+			break;
 		default:
-			
+
 			break;
 		}
 	}

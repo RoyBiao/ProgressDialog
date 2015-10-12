@@ -134,7 +134,9 @@
         </activity>
         <activity android:name="cn.ry.diary.demo3.afinal.AfinalActivity" >
         </activity>
-         <activity android:name="cn.ry.diary.demo3.afinal.InjectActivity" >
+        <activity android:name="cn.ry.diary.demo3.afinal.InjectActivity" >
+        </activity>
+        <activity android:name="cn.ry.diary.demo3.SwipeRefresh.MainActivity" >
         </activity>
     </application>
 

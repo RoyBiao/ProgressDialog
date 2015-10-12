@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="message_unread">#44ff0000</color>    
+
+    <color name="message_unread">#44ff0000</color>
     <color name="eighty_percent_black">#cc000000</color>
+    <color name="white">#FFFFFF</color>
     
-        <color name="white">#FFFFFF</color>
     <!-- 白色 -->
     <color name="ivory">#FFFFF0</color>
     <!-- 象牙色 -->
@@ -295,5 +296,5 @@
     <!-- 海军色 -->
     <color name="black">#000000</color>
     <!-- 黑色 -->
-    
+
 </resources>

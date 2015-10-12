@@ -66,5 +66,10 @@
         android:layout_height="wrap_content"
         android:onClick="onClickItem"
         android:text="afinalInject" />
-     
+      <Button
+        android:id="@+id/SwipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickItem"
+        android:text="SwipeRefreshLayout" />
 </LinearLayout>
