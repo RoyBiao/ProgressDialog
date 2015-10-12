@@ -66,5 +66,12 @@
         android:layout_height="wrap_content"
         android:onClick="onClickItem"
         android:text="afinalInject" />
+       
+       <Button
+        android:id="@+id/ThreadControl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickItem"
+        android:text="ThreadControl" />
      
 </LinearLayout>

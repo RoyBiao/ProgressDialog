@@ -13,6 +13,7 @@ import cn.ry.diary.demo3.afinal.InjectActivity;
 import cn.ry.diary.demo3.aldl.client.AIDLClientActivity;
 import cn.ry.diary.demo3.cusorloader.CusorLoaderActivity;
 import cn.ry.diary.demo3.messager.MessagerActivity;
+import cn.ry.diary.demo3.task.ThreadControlActivity;
 import cn.ry.diary.demo3.touch.TouchActivity;
 
 public class Demo3Activity extends Activity {
@@ -51,6 +52,9 @@ public class Demo3Activity extends Activity {
 			break;
 		case R.id.afinalInject:
 			startActivity(new Intent(this, InjectActivity.class));
+			break;
+		case R.id.ThreadControl:
+			startActivity(new Intent(this, ThreadControlActivity.class));
 			break;
 		default:
 			
