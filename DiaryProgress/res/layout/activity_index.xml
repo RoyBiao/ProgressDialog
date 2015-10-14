@@ -23,5 +23,10 @@
 	    android:layout_height="wrap_content"
 	    android:onClick="onCLickDemoItem"
 	    android:text="demo3"/>
-	
+	<Button 
+	    android:id="@+id/demo4"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:onClick="onCLickDemoItem"
+	    android:text="demo4"/>
 </LinearLayout>
