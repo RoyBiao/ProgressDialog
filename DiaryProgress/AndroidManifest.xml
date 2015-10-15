@@ -136,9 +136,25 @@
         </activity>
         <activity android:name="cn.ry.diary.demo3.afinal.InjectActivity" >
         </activity>
-        <activity android:name="cn.ry.diary.demo3.SwipeRefresh.MainActivity" >
+        <activity android:name="cn.ry.diary.demo3.swipeRefresh.MainActivity" >
+        </activity>
+        <activity android:name="cn.ry.diary.demo3.swipeRefresh2.MainActivity" >
         </activity>
         <activity android:name="cn.ry.diary.demo3.task.ThreadControlActivity" >
+        </activity>
+         <activity android:name="cn.ry.diary.demo3.swipeRefresh2.SwipeActivity" >
+        </activity>
+         <activity android:name="cn.ry.diary.demo4.Demo4Activity" >
+        </activity>
+        <activity android:name="cn.ry.diary.demo4.menu.PathMenuActivity" >
+        </activity>
+        <activity android:name="cn.ry.diary.demo4.menu.YoukuMenuActivity" >
+        </activity>
+        <activity android:name="cn.ry.diary.demo4.rotate3d.Rotate3DActivity" >
+        </activity>
+        <activity android:name="cn.ry.diary.demo4.spinner.SpinnerActivity" >
+        </activity>
+        <activity android:name="cn.ry.diary.demo4.viewpager.ViewPagerActivity" >
         </activity>
         <activity android:name="cn.ry.diary.demo3.cache.MainActivity" >
         </activity>

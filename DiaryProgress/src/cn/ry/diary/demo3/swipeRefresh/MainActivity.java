@@ -2,7 +2,7 @@
  * Created by Storm Zhang, Mar 31, 2014.
  */
 
-package cn.ry.diary.demo3.SwipeRefresh;
+package cn.ry.diary.demo3.swipeRefresh;
 
 import java.util.ArrayList;
 import java.util.Arrays;

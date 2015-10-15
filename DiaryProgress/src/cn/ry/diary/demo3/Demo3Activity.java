@@ -54,7 +54,9 @@ public class Demo3Activity extends Activity {
 			startActivity(new Intent(this, InjectActivity.class));
 			break;
 		case R.id.SwipeRefresh:
-			startActivity(new Intent(this, cn.ry.diary.demo3.SwipeRefresh.MainActivity.class));
+			startActivity(new Intent(this, cn.ry.diary.demo3.swipeRefresh.MainActivity.class));
+		case R.id.SwipeRefresh2:
+			startActivity(new Intent(this, cn.ry.diary.demo3.swipeRefresh2.MainActivity.class));
 		case R.id.ThreadControl:
 			startActivity(new Intent(this, ThreadControlActivity.class));
 			break;

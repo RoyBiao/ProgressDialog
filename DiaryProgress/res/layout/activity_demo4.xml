@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Button 
+	    android:id="@+id/bt_rotate3d"
+	    android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:onClick="buttonClick"
+    	android:text="rotate3d"/>
+    
+	<Button 
+	    android:id="@+id/bt_vp"
+	    android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:onClick="buttonClick"
+    	android:text="ViewPager"/>
+	<Button 
+	    android:id="@+id/bt_sp"
+	    android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:onClick="buttonClick"
+    	android:text="Spinner"/>
+	<Button 
+	    android:id="@+id/bt_youku"
+	    android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:onClick="buttonClick"
+    	android:text="YoukuMenu"/>
+	<Button 
+	    android:id="@+id/bt_path"
+	    android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:onClick="buttonClick"
+    	android:text="PathMenu"/>
+	
+     
+</LinearLayout>
