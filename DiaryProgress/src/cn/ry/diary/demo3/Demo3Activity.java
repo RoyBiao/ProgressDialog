@@ -58,6 +58,9 @@ public class Demo3Activity extends Activity {
 		case R.id.ThreadControl:
 			startActivity(new Intent(this, ThreadControlActivity.class));
 			break;
+		case R.id.ACache:
+			startActivity(new Intent(this, cn.ry.diary.demo3.cache.MainActivity.class));
+			break;
 		default:
 
 			break;

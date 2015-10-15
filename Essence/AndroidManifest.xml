@@ -30,6 +30,7 @@
                 <action android:name="cn.ry.essence.demo01.aidl.service.RemoteService" />
             </intent-filter>
         </service>
+        <activity android:name="cn.ry.essence.demo01.swipeRefresh.MainActivity"></activity>
     </application>
 
 </manifest>

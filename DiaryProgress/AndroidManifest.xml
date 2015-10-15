@@ -138,7 +138,26 @@
         </activity>
         <activity android:name="cn.ry.diary.demo3.SwipeRefresh.MainActivity" >
         </activity>
-        <activity android:name="cn.ry.diary.demo3.task.ThreadControlActivity"></activity>
+        <activity android:name="cn.ry.diary.demo3.task.ThreadControlActivity" >
+        </activity>
+        <activity android:name="cn.ry.diary.demo3.cache.MainActivity" >
+        </activity>
+         <activity android:name="cn.ry.diary.demo3.cache.AboutActivity" >
+        </activity>
+         <activity android:name="cn.ry.diary.demo3.cache.SaveBitmapActivity" >
+        </activity>
+         <activity android:name="cn.ry.diary.demo3.cache.SaveDrawableActivity" >
+        </activity>
+         <activity android:name="cn.ry.diary.demo3.cache.SaveJsonArrayActivity" >
+        </activity>
+         <activity android:name="cn.ry.diary.demo3.cache.SaveJsonObjectActivity" >
+        </activity>
+         <activity android:name="cn.ry.diary.demo3.cache.SaveMediaActivity" >
+        </activity>
+         <activity android:name="cn.ry.diary.demo3.cache.SaveObjectActivity" >
+        </activity>
+         <activity android:name="cn.ry.diary.demo3.cache.SaveStringActivity" >
+        </activity>
     </application>
 
 </manifest>

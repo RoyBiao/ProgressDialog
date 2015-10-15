@@ -1,7 +1,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <Button
         android:id="@+id/AIDLServiceBt"
@@ -9,5 +10,12 @@
         android:layout_height="wrap_content"
         android:onClick="demo01OnClick"
         android:text="AIDLService" />
+    
+     <Button
+        android:id="@+id/SwipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="demo01OnClick"
+        android:text="SwipeRefresh" />
 
 </LinearLayout>
