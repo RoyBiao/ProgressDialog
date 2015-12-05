@@ -86,5 +86,11 @@
         android:layout_height="wrap_content"
         android:onClick="onClickItem"
         android:text="ThreadControl" />
+        <Button
+        android:id="@+id/ACache"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClickItem"
+        android:text="ACache" />
      
 </LinearLayout>
