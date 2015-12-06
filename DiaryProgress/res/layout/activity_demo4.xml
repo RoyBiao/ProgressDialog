@@ -36,5 +36,32 @@
     	android:onClick="buttonClick"
     	android:text="PathMenu"/>
 	
+	<Button 
+	    android:id="@+id/bt_property_animation"
+	    android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:onClick="buttonClick"
+    	android:text="propertyAnimation"/>
+	
+	<Button 
+	    android:id="@+id/bt_property_animation2"
+	    android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:onClick="buttonClick"
+    	android:text="propertyAnimation2"/>
+	
+	<Button 
+	    android:id="@+id/bt_property_animation3"
+	    android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:onClick="buttonClick"
+    	android:text="propertyAnimation3"/>
+	
+	<Button 
+	    android:id="@+id/webview"
+	    android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:onClick="buttonClick"
+    	android:text="webview"/>
      
 </LinearLayout>

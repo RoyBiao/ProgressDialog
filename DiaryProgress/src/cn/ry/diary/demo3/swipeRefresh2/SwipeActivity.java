@@ -1,8 +1,8 @@
 package cn.ry.diary.demo3.swipeRefresh2;
 
-import cn.ry.diary.R;
 import android.app.Activity;
 import android.os.Bundle;
+import cn.ry.diary.R;
 
 public class SwipeActivity extends Activity {
 

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/alphaBt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="propertyClick"
+        android:text="alpha" />
+
+    <Button
+        android:id="@+id/rotationBt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="propertyClick"
+        android:text="rotation" />
+
+    <Button
+        android:id="@+id/translationXBt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="propertyClick"
+        android:text="translationX" />
+
+    <Button
+        android:id="@+id/scaleYBt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="propertyClick"
+        android:text="scaleY" />
+
+    <Button
+        android:id="@+id/animatorSetBt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="propertyClick"
+        android:text="AnimatorSet" />
+    
+    <Button
+        android:id="@+id/animatorSetFileBt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="propertyClick"
+        android:text="AnimatorSetFile" />
+    
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+</LinearLayout>

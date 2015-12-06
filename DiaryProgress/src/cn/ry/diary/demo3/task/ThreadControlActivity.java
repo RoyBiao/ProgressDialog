@@ -10,7 +10,6 @@ import cn.ry.diary.R;
 import cn.ry.diary.common.task.AbTaskItem;
 import cn.ry.diary.common.task.AbTaskListener;
 import cn.ry.diary.common.task.AbTaskObjectListener;
-import cn.ry.diary.common.task.AbTaskPool;
 import cn.ry.diary.common.task.AbTaskQueue;
 
 /**

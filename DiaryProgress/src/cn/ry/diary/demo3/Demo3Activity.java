@@ -11,9 +11,12 @@ import cn.ry.diary.demo3.SlideView.MainActivity;
 import cn.ry.diary.demo3.afinal.AfinalActivity;
 import cn.ry.diary.demo3.afinal.InjectActivity;
 import cn.ry.diary.demo3.aldl.client.AIDLClientActivity;
+import cn.ry.diary.demo3.crop.TestActivity;
 import cn.ry.diary.demo3.cusorloader.CusorLoaderActivity;
 import cn.ry.diary.demo3.messager.MessagerActivity;
 import cn.ry.diary.demo3.task.ThreadControlActivity;
+import cn.ry.diary.demo3.textView.TextView2Activity;
+import cn.ry.diary.demo3.textView.TextView3Activity;
 import cn.ry.diary.demo3.touch.TouchActivity;
 
 public class Demo3Activity extends Activity {
@@ -62,6 +65,12 @@ public class Demo3Activity extends Activity {
 			break;
 		case R.id.ACache:
 			startActivity(new Intent(this, cn.ry.diary.demo3.cache.MainActivity.class));
+			break;
+		case R.id.textviewlick:
+			startActivity(new Intent(this, TextView2Activity.class));
+			break;
+		case R.id.croplick:
+			startActivity(new Intent(this, TestActivity.class));
 			break;
 		default:
 
