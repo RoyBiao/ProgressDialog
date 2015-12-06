@@ -16,11 +16,18 @@ public:
 	}
 	virtual ~Student();
 	void total();
+	void diaplay();
+	void max(Student *stus, int length);
+	void change(int, int, int);
+	void fun(Student &stu,const int num,const int age,const int score);
+public:
 	static float average(Student &stu);
+	void cdisplay() const;
+	void cchange(int) const;
 private:
 	int num;
 	int age;
-	float score;
+	mutable float score;
 	static float sum;
 	static int count;
 };

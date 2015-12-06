@@ -11,8 +11,12 @@
 #include "Time.h"
 #include "Student.h"
 #include "Compare.h"
+#include "SaleStaff.h"
 using namespace std;
 
+/**
+ * test09和test10有疑问
+ */
 int main() {
 	void test09();
 	test09();
@@ -20,12 +24,80 @@ int main() {
 }
 
 /**
+ * 课后练习10，友元函数
+ */
+void test12() {
+	Time t(10, 10, 10);
+	Date d(10, 10, 2015);
+//	dislpay3(t,d);
+}
+
+/**
+ * 课后练习9,静态变量，静态函数
+ */
+void test11() {
+	SaleStaff sta1(101, 5, 20);
+	sta1.average();
+	SaleStaff sta2(102, 12, 25);
+	sta2.average();
+	SaleStaff sta3(101, 5, 10);
+	sta3.average();
+
+	SaleStaff::display();
+}
+
+/**
+ * 课后练习4，5，6，7，8指针和数组
+ */
+void test10() {
+	Student stus[5] = { Student(1001, 18, 70), Student(1002, 18, 73), Student(
+			1003, 19, 75), Student(1004, 16, 78), Student(1005, 20, 90) };
+	Student *stu = stus;
+	(*stu).diaplay();
+	(*(stu + 2)).diaplay();
+	(*(stu + 4)).diaplay();
+	cout << endl;
+	//分数最大
+	(*stu).max(stu, 5);
+	cout << endl;
+	//修改
+	(*stu).change(1001, 18, 100);
+	(*stu).diaplay();
+	cout << endl;
+	//const对象
+	const Student stu1(1006, 20, 93);
+	stu1.cdisplay();
+	stu1.cchange(95);
+	stu1.cdisplay();
+	cout << endl;
+	//指向常对象的指针变量
+	Student stu2(1006, 20, 93);
+	const Student *p = &stu2;
+	(*p).cdisplay();
+	(*p).cchange(95);
+	(*p).cdisplay();
+	cout << endl;
+	//指向对象的常指针
+	Student stu3(1006, 20, 93);
+	Student * const p2 = &stu3;
+	(*p2).diaplay();
+	(*p2).cdisplay();
+	(*p2).cchange(96);
+	(*p2).cdisplay();
+	cout << endl;
+	//对象引用
+	Student stu4(1006, 20, 93);
+	stu4.fun(stu4, 1006, 20, 100);
+	cout << endl;
+}
+
+/**
  * 类模版
  */
 void test09() {
 	Compare<int> c_int(3, 4);
-	cout << "max:" << c_int.max() << endl;
-	cout << "min:" << c_int.min() << endl;
+//	cout << "max:" << c_int.max() << endl;
+//	cout << "min:" << c_int.min() << endl;
 }
 
 /**

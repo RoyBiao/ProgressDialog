@@ -17,6 +17,7 @@ public:
 	}
 	virtual ~Time();
 	void get_time();
+	friend void display3(const Time &,const Date &);
 	friend void display(Time &);
 	void display2(Date &);
 	int hour;
@@ -24,21 +25,21 @@ private:
 	int minute;
 	int sec;
 
-
 };
 
 class Date {
 public:
-	Date(int m, int d, int y) :
+	Date(int m=12, int d=6, int y=2015) :
 			month(m), day(d), year(y) {
 	}
 
+	friend void display3(const Time &, const Date &);
 	friend void Time::display2(Date &);
-
 private:
 	int month;
 	int day;
 	int year;
 };
+
 
 #endif /* TIME_H_ */
