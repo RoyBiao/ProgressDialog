@@ -8,12 +8,12 @@
 
 #include <iostream>
 #include <stdio.h>
-#include "./core/Pointer.h"
+#include "core/point/Pointer.h"
+#include "core/curl/CurlTest.h"
 using namespace std;
 
 int main() {
-	Pointer point;
-	point.test();
-	cout << "h" ;
+	CurlTest curl;
+	curl.getUrl("/home/ruibiao/workspace/git/ProgressDialog/C++_Progress/curl");
 	return 0;
 }
