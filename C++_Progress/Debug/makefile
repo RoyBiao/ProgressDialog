@@ -8,8 +8,11 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
+-include src/core/pthread/subdir.mk
 -include src/core/point/subdir.mk
+-include src/core/jsoncpp/subdir.mk
 -include src/core/curl/subdir.mk
+-include src/core/crypto/subdir.mk
 -include src/subdir.mk
 -include subdir.mk
 -include objects.mk

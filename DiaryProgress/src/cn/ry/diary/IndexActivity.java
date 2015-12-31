@@ -8,6 +8,7 @@ import cn.ry.diary.demo.DemoActivity;
 import cn.ry.diary.demo2.Demo2Activity;
 import cn.ry.diary.demo3.Demo3Activity;
 import cn.ry.diary.demo4.Demo4Activity;
+import cn.ry.diary.demo5.Demo5Activity;
 
 public class IndexActivity extends Activity {
 
@@ -31,6 +32,9 @@ public class IndexActivity extends Activity {
 			break;
 		case R.id.demo4:
 			startActivity(new Intent(this, Demo4Activity.class));
+			break;
+		case R.id.demo5:
+			startActivity(new Intent(this, Demo5Activity.class));
 			break;
 		default:
 			break;

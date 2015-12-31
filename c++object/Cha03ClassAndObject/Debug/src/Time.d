@@ -1,3 +1,3 @@
-src/Time.d: ../src/Time.cpp ../src/Time.h
+src/Time.d src/Time.o: ../src/Time.cpp ../src/Time.h
 
 ../src/Time.h:

@@ -29,4 +29,10 @@
 	    android:layout_height="wrap_content"
 	    android:onClick="onCLickDemoItem"
 	    android:text="demo4"/>
+	<Button 
+	    android:id="@+id/demo5"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:onClick="onCLickDemoItem"
+	    android:text="demo5"/>
 </LinearLayout>

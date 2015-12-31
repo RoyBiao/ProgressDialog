@@ -23,7 +23,10 @@ C_UPPER_DEPS :=
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
+src/core/pthread \
 src/core/point \
+src/core/jsoncpp \
 src/core/curl \
+src/core/crypto \
 src \
 

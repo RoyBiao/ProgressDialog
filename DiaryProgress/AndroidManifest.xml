@@ -142,9 +142,9 @@
         </activity>
         <activity android:name="cn.ry.diary.demo3.task.ThreadControlActivity" >
         </activity>
-         <activity android:name="cn.ry.diary.demo3.swipeRefresh2.SwipeActivity" >
+        <activity android:name="cn.ry.diary.demo3.swipeRefresh2.SwipeActivity" >
         </activity>
-         <activity android:name="cn.ry.diary.demo4.Demo4Activity" >
+        <activity android:name="cn.ry.diary.demo4.Demo4Activity" >
         </activity>
         <activity android:name="cn.ry.diary.demo4.menu.PathMenuActivity" >
         </activity>
@@ -158,25 +158,25 @@
         </activity>
         <activity android:name="cn.ry.diary.demo3.cache.MainActivity" >
         </activity>
-         <activity android:name="cn.ry.diary.demo3.cache.AboutActivity" >
+        <activity android:name="cn.ry.diary.demo3.cache.AboutActivity" >
         </activity>
-         <activity android:name="cn.ry.diary.demo3.cache.SaveBitmapActivity" >
+        <activity android:name="cn.ry.diary.demo3.cache.SaveBitmapActivity" >
         </activity>
-         <activity android:name="cn.ry.diary.demo3.cache.SaveDrawableActivity" >
+        <activity android:name="cn.ry.diary.demo3.cache.SaveDrawableActivity" >
         </activity>
-         <activity android:name="cn.ry.diary.demo3.cache.SaveJsonArrayActivity" >
+        <activity android:name="cn.ry.diary.demo3.cache.SaveJsonArrayActivity" >
         </activity>
-         <activity android:name="cn.ry.diary.demo3.cache.SaveJsonObjectActivity" >
+        <activity android:name="cn.ry.diary.demo3.cache.SaveJsonObjectActivity" >
         </activity>
-         <activity android:name="cn.ry.diary.demo3.cache.SaveMediaActivity" >
+        <activity android:name="cn.ry.diary.demo3.cache.SaveMediaActivity" >
         </activity>
-         <activity android:name="cn.ry.diary.demo3.cache.SaveObjectActivity" >
+        <activity android:name="cn.ry.diary.demo3.cache.SaveObjectActivity" >
         </activity>
-         <activity android:name="cn.ry.diary.demo3.cache.SaveStringActivity" >
+        <activity android:name="cn.ry.diary.demo3.cache.SaveStringActivity" >
         </activity>
         <activity android:name="cn.ry.diary.demo3.textView.TextViewActivity" >
         </activity>
-         <activity android:name="cn.ry.diary.demo3.textView.TextView2Activity" >
+        <activity android:name="cn.ry.diary.demo3.textView.TextView2Activity" >
         </activity>
         <activity android:name="cn.ry.diary.demo3.textView.TextView3Activity" >
         </activity>
@@ -193,6 +193,14 @@
         <activity android:name="cn.ry.diary.demo4.property.animation3.PropertyAnimation3Activity" >
         </activity>
         <activity android:name="cn.ry.diary.demo4.webview.WebViewActivity" >
+        </activity>
+        <activity android:name="cn.ry.diary.demo5.Demo5Activity" >
+        </activity>
+        <activity android:name="cn.ry.diary.demo5.asynctask.AsyncTaskCancelActivity" >
+        </activity>
+        <activity android:name="cn.ry.diary.demo5.asynctask2.AsyncTaskDemoActivity" >
+        </activity>
+         <activity android:name="cn.ry.diary.demo5.listviewrefresh.ListviewreFreshActivity" >
         </activity>
     </application>
 
