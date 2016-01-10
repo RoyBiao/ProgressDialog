@@ -1,0 +1,52 @@
+一、xml设计：
+1、几种字体颜色
+2、几种背景颜色
+3、几种字体大小
+4、统一的style抽取出来（ListView）
+5、默认string.xml
+6、圆角像素同意好，可扩展修改。
+7、背景颜色上下线的情况。
+8、避免以绝对术语来定义布局元素的位置。
+
+二、java设计：
+1、数据同步：
+	1）保持数据库最新，通过CusorAdapter自动更新,适用于数据量少的情况。
+	2）保持数据库最新，通过onResume重新加载，可以利用listview的局部刷新，适用于数据量大的情况。
+	3）一直获取服务器数据，不设置缓存
+2、提前准备：
+	1）常用的公共布局，控件（自定义控件）
+	2）http框架 （okhttp,xutil,afinal）
+	3) 线程池的封装（Asy**task）
+	4) 数据库的设计（多用户模式和单用户模式）
+3、写接口的时候提供是否异步，是否获取缓存，并且不要写死，做到可扩展。
+4、同一个Activity只使用一种点击监听方式。
+5、保存路径统一存放。
+6、WebView父类，Activity父类。
+7、Activity父类键盘监听，现实跟隐藏。
+8、v4,v7包的版本统一。
+9、框架日志统一。
+10、TextView不能把宽度写死，否则更换系统字体会出现异常。
+11、getContext()为空的问题，解决方法
+	1）mContext全局变量
+	2）onSaveInstanceState保存状态，并注意cancel掉异步线程，否则getContext()会出现null。
+
+三、功能设计：
+1、按模块分工，不要做一半后去完成其他模块。
+   该模块如果设计到其他模块的类似功能，可由根据功能再进行二次分工，开发人员自己商量好，便于后期维护。
+2、项目开发时把主要功能都实现，细节还有效果再继续优化。
+
+四、项目管理
+1、统一使用同一个android key。
+2、要制定好开发计划，并按着计划执行，别想一套是一套。
+3、当天的bug当天解决。
+4、先用同一分辨率手机开发一套UI。
+5、任务分工明确，责任明确，跟踪，总结。
+6、能不使用切图的尽量用资源文件来替代，好处是容易适配，不易失真。
+7、各模块信息同步问题。   
+   
+   
+五、错误积累：
+1、填充适配器常报的错误：没有在UI线程更新数据
+2、使用全局变量通过发送消息存取局部变量（obj）的值
+04-20 13:43:41.745: E/ZQLog(30915): java.lang.IllegalStateException: The content of the adapter has changed but ListView did not receive a notification. Make sure the content of your adapter is not modified from a background thread, but only from the UI thread. Make sure your adapter calls notifyDataSetChanged() when its content changes. [in ListView(-1, class android.widget.ListView) with Adapter(class android.widget.HeaderViewListAdapter)]
+3、jni数据量大的时候，记得释放内存（设计原则应该时刻释放内存，除非是返回值）local reference table overflow max 512

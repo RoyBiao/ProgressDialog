@@ -1,3 +1,4 @@
+（一）、编译android原码注意事项
 1.在用Ubuntu 12.04 64bit系统编译android 2.3代码时，发现由于gcc和g++为4.6与android要求不兼容，因此需要
 	sudo apt-get install gcc-4.4
 	sudo apt-get install g++-4.4
@@ -12,7 +13,7 @@
 3.Android源码，编译也通过了，可以正常启动模拟器。但是Android源码内是不包含kernel源码的模拟器，添加自己新编译的内核就启动不了.
   默认情况下启动模拟器选择的kernel的位置是这里：PWD_PATH/prebuilt/android-arm/kernel/kernel-qemu-armv7
         网上找了一下，原来是这样的，我下载的源码是2.3.1版本（内核版本是goldfish），而4.0版本一下的编译内核时候时候配置文件是：make goldfish_defconfig，4.0以上的版本的系统需要ARMv7架构或者以上才能运行，但是4.0以下的不许要。
-        而我却用了meke goldfish_armv7_defconfig，所以不能运行。
+        而我却用了make goldfish_armv7_defconfig，所以不能运行。
         进入内核根目录，make clean一下
         然后make goldfish_defconfig
         再make -j4
@@ -20,11 +21,8 @@
         
         
 在前一篇文章(http://www.linuxidc.com/Linux/2011-06/37781.htm)提到，从源代码树下载下来的最新Android源代码，是不包括内核代码的，也就是Android源代码工程默认不包含Linux Kernel代码，而是使用预先编译好的内核，也就是prebuilt/android-arm/kernel/kernel-qemu文件。那么，如何才能DIY自己的内核呢？这篇文章一一道来。
-
       一. 首选，参照前一篇在Ubuntu上下载、编译和安装Android最新源代码准备好Android源代码目录。
-
       二. 下载Linux Kernel for Android源代码。
-
       1. 使用GIT工具下载，执行以下命令：
 
       www.linuxidc.com@linuxidc:~/Android$ mkdir kernel
@@ -85,3 +83,84 @@ goldfish_defconfig，而这个配置文件是编译内核代码时需要用到的，因此，需要checkout
       root@android:/proc # cat version
       Linux version 2.6.29-gb0d93fb-dirty (luo@Ubuntu-11-04) (gcc version 4.4.3 (GCC) ) #1 Fri Jun 3 23:17:24 HKT 2011
      从机器名luo@ubuntu-11-04和日期1 Fri Jun 3 23:17:24 HKT 2011可以看出，模拟器使用的内核即为刚刚编译出来的内核。
+     
+（二）、编写驱动常用的命令和注意事项
+cat /proc/version  //内核版本
+cat /proc/devices //设备号
+echo hello > /dev/firstDevices  
+cat /dev/firstDevices
+dmesg
+
+
+交叉编译环境：export PATH=$PATH:/data/android_source/android2.3.7/prebuilt/linux-x86/toolchain/arm-eabi-4.4.3/bin
+金鱼模拟器
+1.模拟器环境：export PATH=$PATH:/data/android_source/android2.3.7/out/host/linux-x86/bin
+启动模拟器：emulator -partition-size 1024 -kernel /data/android_source/android2.3.7/prebuilt/android-arm/kernel/kernel-qemu-armv7 -sysdir /data/android_source/android2.3.7/out/target/product/generic -system /data/android_source/android2.3.7/out/target/product/generic/system.img -data /data/android_source/android2.3.7/out/target/product/generic/userdata.img -ramdisk /data/android_source/android2.3.7/out/target/product/generic/ramdisk.img
+2.启动模拟器脚本：
+#!/bin/sh
+export PATH=$PATH:/data/android_source/android2.3.7/out/host/linux-x86/bin
+export ANDROID_PRODUCT_OUT=/data/android_source/android2.3.7/out/target/product/generic
+emulator -kernel /data/android_source/goldfish/goldfish/arch/arm/boot/zImage 
+
+
+将驱动编译进内核
+1.修改驱动MakeFile，添加CONFIG_FIRST_DRIVER
+2.ln -s /driver/first_driver /golefish/driver/char
+3.新建菜单配置文件kconfig
+4.修改编译文件：goldfish makefile(当前驱动类型的MakeFile文件)添加对first_driver的支持  //obj-$(CONFIG_WORD_COUNT)	+= word_count/
+ruibiao@ruibiao-Lenovo-G580:/data/android_source/goldfish/goldfish$ make menuconfig
+scripts/kconfig/mconf arch/arm/Kconfig
+#
+# configuration written to .config
+#
+*** End of Linux kernel configuration.
+*** Execute 'make' to build the kernel or try 'make help'.
+ruibiao@ruibiao-Lenovo-G580:/data/android_source/goldfish/goldfish$ make
+  HOSTLD  scripts/kconfig/conf
+scripts/kconfig/conf -s arch/arm/Kconfig
+  CHK     include/linux/version.h
+make[1]: “include/asm-arm/mach-types.h”是最新的。
+  CHK     include/linux/utsrelease.h
+  SYMLINK include/asm -> include/asm-arm
+  CALL    scripts/checksyscalls.sh
+<stdin>:1097:2: warning: #warning syscall fadvise64 not implemented
+<stdin>:1265:2: warning: #warning syscall migrate_pages not implemented
+<stdin>:1321:2: warning: #warning syscall pselect6 not implemented
+<stdin>:1325:2: warning: #warning syscall ppoll not implemented
+<stdin>:1365:2: warning: #warning syscall epoll_pwait not implemented
+  CHK     include/linux/compile.h
+  GZIP    kernel/config_data.gz
+  IKCFG   kernel/config_data.h
+  CC      kernel/configs.o
+  LD      kernel/built-in.o
+  CC      drivers/char/word_count/word_count.o
+  LD      drivers/char/word_count/built-in.o
+  LD      drivers/char/built-in.o
+  LD      drivers/built-in.o
+  LD      vmlinux.o
+  MODPOST vmlinux.o
+  GEN     .version
+  CHK     include/linux/compile.h
+  UPD     include/linux/compile.h
+  CC      init/version.o
+  LD      init/built-in.o
+  LD      .tmp_vmlinux1
+  KSYM    .tmp_kallsyms1.S
+  AS      .tmp_kallsyms1.o
+  LD      .tmp_vmlinux2
+  KSYM    .tmp_kallsyms2.S
+  AS      .tmp_kallsyms2.o
+  LD      vmlinux
+  SYSMAP  System.map
+  SYSMAP  .tmp_System.map
+  OBJCOPY arch/arm/boot/Image
+  Kernel: arch/arm/boot/Image is ready
+  GZIP    arch/arm/boot/compressed/piggy.gz
+  AS      arch/arm/boot/compressed/piggy.o
+  LD      arch/arm/boot/compressed/vmlinux
+  OBJCOPY arch/arm/boot/zImage
+  Kernel: arch/arm/boot/zImage is ready
+  Building modules, stage 2.
+  MODPOST 1 modules
+
+     
