@@ -1,0 +1,61 @@
+#ifndef __IKAN_JNIENV_H
+#define __IKAN_JNIENV_H
+
+#include "YiLog.h"
+
+#include <jni.h>
+
+using namespace yiim;
+
+class JniEnvTool {
+public:
+	JniEnvTool() {
+		fEnv = NULL;
+		env();
+	}
+	virtual ~JniEnvTool() {
+		UnionJNIEnvToVoid global;
+		global.venv = NULL;
+
+		if (mAttached
+				&& g_jvm->GetEnv(&global.venv, JNI_VERSION_1_6) == JNI_OK) {
+			//Detach
+			if (g_jvm->DetachCurrentThread() != JNI_OK) {
+				YiLog::getInstance().e("DetachCurrentThread() failed");
+			}
+			YiLog::getInstance().i("DetachCurrentThread ");
+		}
+	}
+	JNIEnv* env() {
+		if (NULL == fEnv) {
+			UnionJNIEnvToVoid global;
+			global.venv = NULL;
+			mAttached = false;
+			
+			//如果当前线程没有attach，g_jvm->GetEnv()执行后就不等于 JNI_OK
+			if (g_jvm->GetEnv(&global.venv, JNI_VERSION_1_6) != JNI_OK) {
+				//Attach
+				if (g_jvm->AttachCurrentThread(&fEnv, NULL) != JNI_OK) {
+					YiLog::getInstance().e("AttachCurrentThread() failed");
+				}
+				YiLog::getInstance().i("AttachCurrentThread ");
+				mAttached = true;
+			} else {
+				fEnv = global.env;
+			}
+		}
+		return fEnv;
+	}
+private:
+	typedef union {
+		JNIEnv* env;
+		void* venv;
+	} UnionJNIEnvToVoid;
+
+	JNIEnv* fEnv;
+	bool mAttached;
+public:
+	static JavaVM *g_jvm;
+};
+
+#endif

@@ -1,0 +1,45 @@
+package com.mooc.shader.roundimageview;  
+  
+import android.content.Context;  
+  
+public class CustomManager  
+{  
+    private static CustomManager sInstance;  
+    private Context mContext;  
+  
+    private CustomManager(Context context)  
+    {  
+        this.mContext = context;  
+    }  
+
+    public static synchronized CustomManager getInstance(Context context)  
+    {  
+        if (sInstance == null)  
+        {  
+            sInstance = new CustomManager(context);  
+        }  
+        return sInstance;  
+    }  
+      
+    //some methods   
+    private void someOtherMethodNeedContext()  
+    {  
+          
+    }  
+} 
+这个类中的sInstance是一个static且强引用的，在其内部引用了一个Activity作为Context，
+也就是说，我们的这个Activity只要我们的项目活着，就没有办法进行内存回收。
+而我们的Activity的生命周期肯定没这么长，所以直接使用会造成了内存泄漏。
+
+
+   public static synchronized CustomManager getInstance(Context context)  
+   {  
+        if (sInstance == null)  
+        {  
+            sInstance = new CustomManager(context.getApplicationContext());  
+        }  
+        return sInstance;  
+   } 
+这就解决了内存泄漏的问题，因为我们引用的是一个ApplicationContext，它的生命周期和我们的单例对象一致。
+
+总结：和UI相关的方法基本都不建议或者不可使用getApplicationContext()

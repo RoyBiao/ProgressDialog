@@ -1,0 +1,24 @@
+一.unbuntu安装安卓环境
+1.sudo apt-get update
+
+2.sudo apt-get install openjdk-7-jdk
+
+3.解压64位的ADT,解压64为NDK
+
+
+4.NDK环境配置
+  sudo gedit /etc/profile
+  #NDK
+  export NDKROOT=/home/ubuntu1404/soft/android/android-ndk-r10b
+  export PATH=$NDKROOT:$PATH
+  source /etc/profile
+
+5.sudo apt-get install synaptic
+
+6.打开synaptiz
+  setting->Repositories->other software->add
+  输入：deb http://ubuntu.cn99.com/ubuntu/ precise main restricted universe multiverse（ubuntu 12.04 源）
+
+7.sudo apt-get update
+
+8.sudo apt-get install ia32-libs

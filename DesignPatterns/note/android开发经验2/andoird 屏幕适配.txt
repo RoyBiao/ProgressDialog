@@ -1,0 +1,45 @@
+一块确定大小的屏幕区域l密度为low的屏幕拥有的像素更少
+
+对屏幕进行适配时，一般不关注它的分辨率，只关注它的屏幕大小和密度。
+
+图片大小的确定：low:medium:high:xhigh:xxhigh比例为0.75/1.0/1.5/2.0  120:160:240:320:480
+
+为了使代码简单，android内部使用pix为单位表示控件的尺寸，但这是基于当前屏幕基础上的。
+为了适应多种屏幕，android建议开发者不要使用具体的像素来表示控件尺寸。
+
+
+
+// 获取屏幕密度（方法3）  
+DisplayMetrics dm = new DisplayMetrics(); 
+getWindowManager().getDefaultDisplay().getMetrics(dm);  
+  
+density  = dm.density;      // 屏幕密度（像素比例：0.75/1.0/1.5/2.0）  
+densityDPI = dm.densityDpi;     // 屏幕密度（每寸像素：120/160/240/320）  
+xdpi = dm.xdpi;           
+ydpi = dm.ydpi;  
+  
+Log.e(TAG + "  DisplayMetrics", "xdpi=" + xdpi + "; ydpi=" + ydpi);  
+Log.e(TAG + "  DisplayMetrics", "density=" + density + "; densityDPI=" + densityDPI);  
+  
+int screenWidthDip = dm.widthPixels;        // 屏幕宽（dip，如：320dip）  
+int screenHeightDip = dm.heightPixels;      // 屏幕宽（dip，如：533dip）  
+  
+Log.e(TAG + "  DisplayMetrics(222)", "screenWidthDip=" + screenWidthDip + "; screenHeightDip=" + screenHeightDip);  
+
+
+DisplayMetrics(1808): xdpi=345.0566; ydpi=342.23157
+
+DisplayMetrics(1808): density=2.0; densityDPI=320.0
+
+DisplayMetrics(222)(1808): screenWidthDip=720; screenHeightDip=1280
+
+
+
+设置Android程序支持多种分辨率，那么就可以得到正确的物理尺寸了。
+<supports-screens
+android:smallScreens="true"
+android:normalScreens="true"
+android:largeScreens="true"
+android:resizeable="true"
+android:anyDensity="true" />
+<uses-sdk android:minSdkVersion="3" android:targetSdkVersion="8" />

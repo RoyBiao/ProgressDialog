@@ -147,8 +147,8 @@ public class MatcherTest {
 		Matcher m = p.matcher("aaa2223bb11222");
 		System.out.println("test6:"+m.matches());
 		while (m.find()) {
-			System.out.println(m.start());// 第一个循环返回3，第二个循环返回9
-			System.out.println(m.end());// 返回7,第二个循环返回14
+			System.out.print(m.start()+"\t");// 第一个循环返回3，第二个循环返回9
+			System.out.print(m.end()+"\t");// 返回7,第二个循环返回14
 			System.out.println(m.group());// 返回2233，第二个返回11222
 		}
 	}
@@ -163,7 +163,7 @@ public class MatcherTest {
 		Pattern p = Pattern.compile("(\\w)(\\d\\d)(\\w+)");
 		Matcher m = p.matcher("aa11bbb");
 		if (m.find()) {
-			System.out.println("group:" + m.group());
+			//System.out.println("group:" + m.group());
 			int count = m.groupCount(); // 返回匹配组的数目，而不是匹配字符串的数目
 			for (int i = 0; i <= count; i++)
 				System.out.println("group " + i + " :" + m.group(i));

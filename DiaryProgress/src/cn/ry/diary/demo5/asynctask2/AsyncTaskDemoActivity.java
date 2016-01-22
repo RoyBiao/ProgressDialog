@@ -85,7 +85,7 @@ public class AsyncTaskDemoActivity extends Activity {
                  * first five finish. In all, the pool size of AsyncTask is 5, at any time it only 
                  * has 5 threads running. 
                  */  
-//                task.execute();  
+                task.execute();  
                 // use AsyncTask#SERIAL_EXECUTOR is the same to #execute();  
 //                task.executeOnExecutor(AsyncTask.SERIAL_EXECUTOR);  
                 // use AsyncTask#THREAD_POOL_EXECUTOR is the same to older version #execute() (less than API 11)  
@@ -96,7 +96,7 @@ public class AsyncTaskDemoActivity extends Activity {
                 // execute tasks at some limit which can be customized  
 //                task.executeOnExecutor(LIMITED_TASK_EXECUTOR);  
                 // no limit to thread pool size, all tasks run simultaneously  
-               task.executeOnExecutor(FULL_TASK_EXECUTOR);  
+//              task.executeOnExecutor(FULL_TASK_EXECUTOR);  
                   
                 mTaskList.add(task);  
             }  

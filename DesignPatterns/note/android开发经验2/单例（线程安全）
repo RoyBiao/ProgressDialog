@@ -1,0 +1,16 @@
+ 1 public class Singleton {  
+ 2     private volatile static Singleton singleton;  
+ 3     private Singleton (){}   
+ 4     public static Singleton getSingleton() {  
+ 5     if (singleton == null) {  
+ 6         synchronized (Singleton.class) {  
+ 7         if (singleton == null) {  
+ 8             singleton = new Singleton();  
+ 9         }  
+10         }  
+11     }  
+12     return singleton;  
+13     }  
+14 }  
+
+
