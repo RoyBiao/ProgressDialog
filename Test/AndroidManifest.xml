@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="8" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:label="Test for my app"
+        android:targetPackage="com.example.test2.pinyin2" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <application
+        android:name="com.example.test.toast.HsToast4"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <uses-library android:name="android.test.runner" />
+
+        <activity
+            android:name="com.example.HomeActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.test.thread.ThreadActivity" >
+        </activity>
+        <activity android:name="com.example.test.sharePreferance.UserInfoActivity" >
+        </activity>
+        <activity android:name="com.example.test.cache.TestImageActivity" >
+        </activity>
+        <activity android:name="com.example.test.image.ImageActivity" >
+        </activity>
+        <activity android:name="com.example.test.image.ImageActivity2" >
+        </activity>
+        <activity android:name="com.example.test.viewpager.IndexActivity" >
+        </activity>
+        <activity android:name="com.example.test.enum1.EnumActivity" >
+        </activity>
+        <activity android:name="com.example.test.threadpool.MainActivity" >
+        </activity>
+        <activity android:name="com.example.test.threadpool.ThreadActivity1" >
+        </activity>
+        <activity android:name="com.example.test.threadpool.ThreadActivity2" >
+        </activity>
+        <activity android:name="com.example.test.threadpool.ThreadActivity3" >
+        </activity>
+        <activity android:name="com.example.test.threadpool.ThreadActivity4" >
+        </activity>
+        <activity android:name="com.example.test.cache2.ui.AboutActivity" >
+        </activity>
+        <activity android:name="com.example.test.cache2.ui.MainActivity" >
+        </activity>
+        <activity android:name="com.example.test.cache2.ui.SaveBitmapActivity" >
+        </activity>
+        <activity android:name="com.example.test.cache2.ui.SaveDrawableActivity" >
+        </activity>
+        <activity android:name="com.example.test.cache2.ui.SaveJsonArrayActivity" >
+        </activity>
+        <activity android:name="com.example.test.cache2.ui.SaveJsonObjectActivity" >
+        </activity>
+        <activity android:name="com.example.test.cache2.ui.SaveMediaActivity" >
+        </activity>
+        <activity android:name="com.example.test.cache2.ui.SaveObjectActivity" >
+        </activity>
+        <activity android:name="com.example.test.cache2.ui.SaveStringActivity" >
+        </activity>
+        <activity android:name="com.example.test.task.TestTaskActivity" >
+        </activity>
+        <activity android:name="com.example.test.AsyncTask.TestAsyncTaskActivity" >
+        </activity>
+		<activity android:name="com.example.test.zq.dao.TestDaoActivity"></activity>
+       	<activity android:name="com.example.test.MainActivity"></activity>
+       	<activity android:name="com.example.test2.MainActivity"></activity>
+       	<activity android:name="com.example.test2.sortlistview.SortListViewActivity"></activity>
+       	<activity android:name="com.example.test2.shape.ShapeActivity"></activity>
+    </application>
+
+</manifest>
