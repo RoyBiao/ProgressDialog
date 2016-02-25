@@ -9,4 +9,24 @@
                         break;  
                     }  
             }  
-        }  
+        }
+
+2.   * 缓存数据的存放位置为:
+     * /sdcard/Android/data//cache 
+     * 如果SD卡不存在时缓存存放位置为:
+     * /data/data//cache
+     * 
+     */
+    public static File getDiskLruCacheDir(Context context, String dataType) {
+        String dirPath;
+        File cacheFile = null;
+        if (Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState()) ||
+            !Environment.isExternalStorageRemovable()) {
+            dirPath=context.getExternalCacheDir().getPath();
+        } else {
+            dirPath=context.getCacheDir().getPath();
+        }
+        cacheFile=new File(dirPath+File.separator+dataType);
+        return cacheFile;
+    }  
+    

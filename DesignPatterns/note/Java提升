@@ -15,7 +15,7 @@
   TreeSet<String> set2 = new TreeSet<String>(String.CASE_INSENSITIVE_ORDER);//按字母排序
 7.Collection:
 	List:ArrayList,LinkedList
-	Set:HashSet,TreeSet,LinkHashSet
+	Set:HashSet,TreeSet,LinkHashSet 元素无重复
   Map:（keySet()，values()，entrySet()）
     HashMap,TreeMap,LinkedHashMap
 8.Queue<Integer> queue = new LinkedList<Integer>();

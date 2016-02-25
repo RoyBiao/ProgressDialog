@@ -47,6 +47,7 @@ public class AsyncTaskCancelActivity extends Activity {
 	@Override
 	protected void onStop() {
 		super.onStop();
+		Log.i(TAG,"onstop");
 		if (mTask != null) {
 			mTask.cancel(true);
 		}
@@ -56,6 +57,7 @@ public class AsyncTaskCancelActivity extends Activity {
 	protected void onSaveInstanceState(Bundle outState) {
 		// TODO Auto-generated method stub
 		super.onSaveInstanceState(outState);
+		Log.i(TAG,"onSaveInstanceState");
 		if (mTask != null) {
 			outState.putInt(STATE_COMPUTE, 10002);
 		}

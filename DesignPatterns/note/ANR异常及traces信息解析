@@ -1,0 +1,56 @@
+一、ANR(Application Not Responding)定义
+在Android上，如果你的应用程序有一段时间响应不够灵敏，系统会向用户显示一个对话框，这个对话框称作应用程序无响应（ANR：Application Not Responding）对话框。用户可以选择“等待”而让程序继续运行，也可以选择“强制关闭”。所以一个流畅的合理的应用程序中不能出现anr，而让用户每次都要处理这个对话框。因此，在程序里对响应性能的设计很重要，这样系统不会显示ANR给用户。
+
+二、三种常见类型
+1：KeyDispatchTimeout(5 seconds) --主要类型
+按键或触摸事件在特定时间内无响应
+2：BroadcastTimeout(10 seconds)
+BroadcastReceiver在特定时间内无法处理完成
+3：ServiceTimeout(20 seconds) --小概率类型
+Service在特定的时间内无法处理完
+
+三、如何分析ANR生成的Traces
+出现Application Not Responding的提示后，系统会将日志LOG写到到data\anr\traces.txt文件
+
+DALVIK THREADS:
+(mutexes: tll=0 tsl=0 tscl=0 ghl=0 hwl=0 hwll=0)
+"main" prio=5 tid=1 NATIVE
+  | group="main" sCount=1 dsCount=0 obj=0x40025340 self=0xd180
+  | sysTid=1071 nice=0 sched=0/0 cgrp=default handle=-1344994080
+  | schedstat=( 2355584448 1199910712 3410 )
+  at java.net.InetAddress.getaddrinfo(Native Method)
+  at java.net.InetAddress.lookupHostByName(InetAddress.java:540)
+  at java.net.InetAddress.getAllByNameImpl(InetAddress.java:333)
+  at java.net.InetAddress.getAllByName(InetAddress.java:295)
+  at org.apache.harmony.luni.internal.net.www.protocol.http.HttpConnection.<init>(HttpConnection.java:100)
+  at org.apache.harmony.luni.internal.net.www.protocol.http.HttpConnection.<init>(HttpConnection.java:79)
+  at org.apache.harmony.luni.internal.net.www.protocol.http.HttpConnection$Address.connect(HttpConnection.java:353)
+  at org.apache.harmony.luni.internal.net.www.protocol.http.HttpConnectionPool.get(HttpConnectionPool.java:120)
+  at org.apache.harmony.luni.internal.net.www.protocol.http.HttpURLConnectionImpl.getHttpConnection(HttpURLConnectionImpl.java:316)
+  at org.apache.harmony.luni.internal.net.www.protocol.http.HttpURLConnectionImpl.makeConnection(HttpURLConnectionImpl.java:298)
+  at org.apache.harmony.luni.internal.net.www.protocol.http.HttpURLConnectionImpl.connect(HttpURLConnectionImpl.java:236)
+  at org.apache.harmony.luni.internal.net.www.protocol.http.HttpURLConnectionImpl.getOutputStream(HttpURLConnectionImpl.java:645)
+  at com.rayray.cool.util.URLUtil.invokeURL(URLUtil.java:136)
+  at com.rayray.cool.activity.WoDeJianYiActivity$1.onClick(WoDeJianYiActivity.java:173)
+  at android.view.View.performClick(View.java:2535)
+  at android.view.View$PerformClick.run(View.java:9129)
+  at android.os.Handler.handleCallback(Handler.java:618)
+  at android.os.Handler.dispatchMessage(Handler.java:123)
+  at android.os.Looper.loop(SourceFile:351)
+  at android.app.ActivityThread.main(ActivityThread.java:3821)
+  at java.lang.reflect.Method.invokeNative(Native Method)
+  at java.lang.reflect.Method.invoke(Method.java:538)
+  at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:969)
+  at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:727)
+  at dalvik.system.NativeStart.main(Native Method)
+
+出现ANR问题的原因就是上面红色代码中
+at com.rayray.cool.activity.WoDeJianYiActivity$1.onClick(WoDeJianYiActivity.java:173) 是Android中Activity
+at com.rayray.cool.util.URLUtil.invokeURL(URLUtil.java:136) 是一次耗时的联网请求
+
+四、如何避免KeyDispatchTimeout
+1. UI线程尽量只做跟UI相关的工作
+2. 耗时的工作（比如数据库操作，I/O，连接网络或者别的有可能阻碍UI线程的操作）把它放入单独的线程处理
+3. 尽量用Handler来处理UIthread和别的thread之间的交互
+
+五、项目发布前，应把\data\anr\traces.txt文件上传到后台去。
