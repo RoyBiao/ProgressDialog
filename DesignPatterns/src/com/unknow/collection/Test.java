@@ -2,6 +2,9 @@ package com.unknow.collection;
 
 import java.util.ArrayList;
 
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+
 
 public class Test {
 
@@ -16,5 +19,11 @@ public class Test {
 		
 		int a=1/2;
 		System.out.println(a);
+		
+		try {
+			JAXBContext jaxbContext = JAXBContext.newInstance("com.liulutu.student.model");
+		} catch (JAXBException e) {
+			e.printStackTrace();
+		}  
 	}
 }

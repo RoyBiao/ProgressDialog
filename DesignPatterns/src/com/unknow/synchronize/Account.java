@@ -15,7 +15,7 @@ public class Account {
         tmp += amt;
         
         try {
-            Thread.sleep(100);//模拟其它处理所需要的时间，比如刷新数据库等
+            Thread.sleep(100);
         } catch (InterruptedException e) {
             // ignore
         }
@@ -28,7 +28,7 @@ public class Account {
         tmp -= amt;
 
         try {
-            Thread.sleep(100);//模拟其它处理所需要的时间，比如刷新数据库等
+            Thread.sleep(100);
         } catch (InterruptedException e) {
             // ignore
         }        

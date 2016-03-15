@@ -27,8 +27,8 @@ public class PropertyAnimationActivity extends Activity {
 
 	public void propertyClick(View view) {
 //		ValueAnimator 是ObjectAnimator的父类
-//		ValueAnimator 操作于值
-//		ObjectAnimator 操作于属性  
+//		ValueAnimator 操作于值，作用域广，可以自定义TypeEvaluator
+//		ObjectAnimator 操作于属性 ,属性必须实现get,set方法，可以自定义TypeEvaluator
  		ObjectAnimator animator = null;
 		switch (view.getId()) {
 		case R.id.alphaBt:
