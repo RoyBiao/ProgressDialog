@@ -1,0 +1,33 @@
+1.发包（注解，反射，加锁，解锁，）（ProviderManager和xmpp_providers.xml）（PacketWriter PacketReader Packet）
+2.心跳包
+3.主动收包 
+4.被动收包（通过XmppService的四个监听(ConnectionListener, LoginListener, PacketListener, ConnectionListerner)来被动接收服务器的包）
+5.两个service来保证xmpp服务一直运行（系统回收，无法实现）
+
+
+PacketWriter 阻塞等待？ InterceptorWrapper拦截器作用？
+
+
+事件驱动开发  le_xmpp缓存机制
+
+
+svn://192.168.20.196/nightclub/01.CI/1.7 Code/Android/1.7.3 Trunk/
+账号：lirb 密码：mp9hxo00
+svn://192.168.20.196/nightclub/01.CI/1.4 Design/1.4.1 SD/Draft
+
+
+框架积累：
+1.API:工厂单例模式
+2.MessageHandler（Subject父类）：观察者模式，替代广播（占用资源大），适用于全局模式
+3.注解和xml结合
+4.BaseViewpagerActivity
+5.优先使用FragmentDialog
+6.EditText 电话号码的提取，年龄，性别
+
+
+经验积累：
+1.前期调查点击事件，打点击功能抽取出来共用；
+2.图片应该含有大图和小图；
+3.数据分页情况；
+4.任务分配要有时间计划；
+5.使用git,svn同步设计资料，使用remind跟踪项目情况；
