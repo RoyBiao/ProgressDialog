@@ -1,17 +1,16 @@
-一、android studio
-1.熟悉android studio开发，eclipse和studio项目的转换，包括NDK。
-2.fresco RxJava glide Picasso gesture-imageview diskLruCache
-3.使用android studio搭建项目
-二、android深入
-1.NDK c++的深入学习。
-2.luancher的学习和编译。
-3.源码分析和情节再现。
-4.Android系统级深入开发——移植与调试。
-三、linux和c
-1.数据结构
+一、android深入
+1.fresco RxJava glide Picasso gesture-imageview diskLruCache
+2.深入学习java,改造公司框架(参考yiim和其他即使通讯)
+3.NDK c++的深入学习。
+4.luancher的学习和编译。
+5.源码分析和情节再现。
+6.Android系统级深入开发——移植与调试。
+二、linux和c
+1.数据结构和算法
 2.深入学习linux shell,linux脚本。
 3.linux c语言。
 4.linux内核设计与实现。
-四、服务器：
+三、服务器：
 1.搭建server client。
+2.即使通讯服务器。
 
