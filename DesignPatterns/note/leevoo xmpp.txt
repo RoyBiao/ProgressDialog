@@ -1,0 +1,17 @@
+1.发包（注解，反射，加锁，解锁，）（ProviderManager和xmpp_providers.xml）（PacketWriter PacketReader Packet）
+2.心跳包
+3.主动收包 
+4.被动收包（通过XmppService的四个监听(ConnectionListener, LoginListener, PacketListener, ConnectionListerner)来被动接收服务器的包）
+5.两个service来保证xmpp服务一直运行（系统回收，无法实现）
+
+
+PacketWriter 阻塞等待？ InterceptorWrapper拦截器作用？
+
+
+事件驱动开发  le_xmpp缓存机制
+
+
+svn://192.168.20.196/nightclub/01.CI/1.7 Code/Android/1.7.3 Trunk/
+账号：lirb 密码：mp9hxo00
+svn://192.168.20.196/nightclub/01.CI/1.4 Design/1.4.1 SD/Draft
+
