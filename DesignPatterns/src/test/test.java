@@ -1,5 +1,8 @@
 package test;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class test {
 
 	/**
@@ -7,8 +10,9 @@ public class test {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int a = 3%3;
-		System.out.println("a:"+a);
+		Map<String,String> map =new HashMap<String,String>();
+		map.put("aa", "aa");
+		map.remove("bb0");
 	}
 
 }
