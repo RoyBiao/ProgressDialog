@@ -1,0 +1,73 @@
+
+1.	vim /etc/apt/sources.list.d/pgdg.list
+
+ 创建并添加如下内容：
+deb http://apt.postgresql.org/pub/repos/apt/ trusty-pgdg main
+
+2.	
+Wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+sudo apt-get update
+ 
+sudo apt-get install postgresql-9.4
+--sudo apt-get install postgis
+sudo apt-get install postgresql-9.4-postgis-2.2
+
+安装完毕要配置了，#sudo -u postgres psql(用postgres登录psql)
+postgres#\password postgres（在psql环境为postgres用户指定密码，退出是\q)
+修改配置文件/etc/postgresql/9.4/main/postgresql.conf: listen_address='*' password_encryption=on
+修改/etc/postgresql/9.4/main/pg_hba.conf: host all all 127.0.0.1/32 md5为pg_hba.conf: host all all all md5
+sudo service postgresql restart
+然后就可以在外面用navicat登录了。
+
+hsbackstage
+创建数据库 test
+create database test WITH ENCODING = 'UTF8';
+启用test数据库的postgis
+-- Enable PostGIS (includes raster)
+CREATE EXTENSION postgis;
+-- Enable Topology
+CREATE EXTENSION postgis_topology;
+-- fuzzy matching needed for Tiger
+CREATE EXTENSION fuzzystrmatch;
+-- Enable US Tiger Geocoder
+CREATE EXTENSION postgis_tiger_geocoder;
+
+
+CREATE TABLE public.mytable ( 
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(128)
+); 
+
+select AddGeometryColumn('public', 'mytable','location',4326,'POINT',2);
+
+CREATE INDEX mytable_gix
+  ON public.mytable 
+  USING GIST (location);
+
+INSERT INTO public.mytable (name, location) VALUES ('001',
+  ST_GeomFromText('POINT(116.3623 39.946804)', 4326)
+);
+
+这个距离不是很清楚
+SELECT id, name, st_distance(location, ST_GeomFromText('POINT(116.454286 39.936625)', 4326)) as distance
+FROM mytable
+WHERE ST_DWithin(
+  location, 
+  ST_GeomFromText('POINT(116.454286 39.936625)', 4326),
+  1000
+);
+
+这个返回距离为米
+SELECT id, name, ST_Distance_Sphere(location, ST_GeomFromText('POINT(116.454286 39.936625)', 4326)) as distance
+FROM mytable
+WHERE ST_DWithin(
+  location, 
+  ST_GeomFromText('POINT(116.454286 39.936625)', 4326),
+  1000
+);
+
+
+数据库倒入： psql -h localhost -U postgres -d zq2 </data/zq.sql
+数据库导出： pg_dump -h localhost -U postgres zq >/data/zq.sql
+
+

@@ -1,0 +1,58 @@
+Tomcat7 安装后，相关目录和配置是在以下目录：
+
+sudo apt-get -y install tomcat7 tomcat7-admin
+
+/usr/share/tomcat7
+/var/lib/tomcat7/webapps
+/etc/tomcat7/Catalina/localhost
+启动
+
+sudo service tomcat7 startup
+
+关闭
+
+sudo service tomcat7 stop
+
+增加tomcat7管理员
+
+vim /var/lib/tomcat7/conf/tomcat-users.xml
+
+<role rolename="admin-gui"/>
+<role rolename="admin-script"/>
+<role rolename="manager-gui"/>
+<role rolename="manager-script"/>
+<role rolename="manager-jmx"/>
+<role rolename="manager-status"/>
+<user username="admin" password="admin" roles="manager-gui,manager-script,manager-jmx,manager-status,admin-script,admin-gui"/>
+
+tomcat7 日志
+
+tail -f /var/lib/tomcat7/logs/catalina.out
+
+web项目url get传输乱码
+
+tomcat conf server.xml
+
+ <Connector port="8080" protocol="HTTP/1.1"
+               connectionTimeout="20000"
+               URIEncoding="UTF-8"
+               redirectPort="8443" />
+
+
+终端输入命令自动安装tomcat有一个弊端，这样安装的tomcat被自动放置在两个文件夹中，需要建立符号连接，否则在eclipse上添加服务器的时候会报错。
+
+网上添加符号连接端方式有两种：
+
+第一种
+sudo ln -s /var/lib/tomcat7/conf /usr/share/tomcat7/conf 
+sudo ln -s /etc/tomcat7/policy.d/03catalina.policy /usr/share/tomcat7/conf/catalina.policy 
+sudo ln -s /var/log/tomcat7 /usr/share/tomcat7/log 
+sudo chmod -R 777 /usr/share/tomcat7
+sudo chmod -R 777 /var/lib/tomcat7
+sudo chmod -R 777 /var/log/tomcat7
+sudo chmod -R 777 /etc/tomcat7
+
+
+卸载tomcat7
+sudo apt-get purge tomcat7 tomcat7-admin
+sudo apt-get autoremove tomcat7 tomcat7-admin

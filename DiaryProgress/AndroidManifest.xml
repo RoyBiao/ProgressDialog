@@ -200,7 +200,7 @@
         </activity>
         <activity android:name="cn.ry.diary.demo5.asynctask2.AsyncTaskDemoActivity" >
         </activity>
-         <activity android:name="cn.ry.diary.demo5.listviewrefresh.ListviewreFreshActivity" >
+        <activity android:name="cn.ry.diary.demo5.listviewrefresh.ListviewreFreshActivity" >
         </activity>
     </application>
 

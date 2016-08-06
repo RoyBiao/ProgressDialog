@@ -37,6 +37,8 @@
 14、注解和xml结合
 16、优先使用FragmentDialog
 17、EditText 电话号码的提取，年龄，性别
+18、上拉加载更多的时候page不能先加1，等成功以后才加1
+19、常用Activity跳转抽取出来
 
 
 
@@ -52,7 +54,8 @@
 9、数据分页情况；
 10、前期调查点击事件，打点击功能抽取出来共用；
 11、图片应该含有大图和小图；
-12、按模块分工，不要做一半后去完成其他模块。该模块如果设计到其他模块的类似功能，可由根据功能再进行二次分工，开发人员自己商量好，便于后期维护13、项目开发时把主要功能都实现，细节还有效果再继续优化。  
+12、按模块分工，不要做一半后去完成其他模块。该模块如果设计到其他模块的类似功能，可由根据功能再进行二次分工，开发人员自己商量好，便于后期维护
+13、项目开发时把主要功能都实现，细节还有效果再继续优化。  
 
 
    
@@ -62,3 +65,6 @@
 04-20 13:43:41.745: E/ZQLog(30915): java.lang.IllegalStateException: The content of the adapter has changed but ListView did not receive a notification. Make sure the content of your adapter is not modified from a background thread, but only from the UI thread. Make sure your adapter calls notifyDataSetChanged() when its content changes. [in ListView(-1, class android.widget.ListView) with Adapter(class android.widget.HeaderViewListAdapter)]
 3、jni数据量大的时候，记得释放内存（设计原则应该时刻释放内存，除非是返回值）local reference table overflow max 512
 4、在开发的过程中碰到一个棘手的问题，调用Activity.finish函数Acitivity没有执行生命周期的ondestory函数，后面查找半天是因为有一个handler成员，因为它有一个delay消息没有处理，调用Activity.finish，Activity不会马上destory，所以记得在Ativity finish前清理一下handle中的未处理的消息，这样Activity才会顺利的destory
+5.使用全局变量通过发送消息存取局部变量（obj）的值
+04-20 13:43:41.745: E/ZQLog(30915): java.lang.IllegalStateException: The content of the adapter has changed but ListView did not receive a notification. Make sure the content of your adapter is not modified from a background thread, but only from the UI thread. Make sure your adapter calls notifyDataSetChanged() when its content changes. [in ListView(-1, class android.widget.ListView) with Adapter(class android.widget.HeaderViewListAdapter)]
+

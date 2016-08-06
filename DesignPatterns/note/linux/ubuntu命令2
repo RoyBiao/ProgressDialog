@@ -59,5 +59,8 @@ nohup命令可以在用户退出时继续执行某一进程
 	-r 　　删除当前的crontab
 	-e 　　使用编辑器编辑当前crontab文件
 select-editor
+
+find . -name "*.xml" -print | xargs perl -pi -e 's/com.minephone.rices/cn.meetnew.meiliu/g'
+
       	
 
